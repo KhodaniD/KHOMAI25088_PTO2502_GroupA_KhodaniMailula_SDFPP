@@ -842,4 +842,793 @@ h2 {
   
   }
   
+   /* Projects Section */
+
+.projects-section {
+
+    grid-area: projects;
+
+    background-color: var(--white-background);
+
+    padding: 20px;
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+}
+
+ 
+
+.project-year {
+
+    font-size: 0.9em;
+
+    font-style: italic;
+
+    color: var(--text-color-secondary);
+
+    margin-bottom: 4px; /* Add spacing below the year */
+
+    text-align: left; /* Align the year to the left */
+
+}
+
+.projects-section h2 {
+
+  font-family: Poppins;
+
+  font-weight: 500;
+
+  font-size: 33.88px;
+
+  line-height: 150%;
+
+  letter-spacing: 0%;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+}
+
+
+
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 15px;
+
+}
+
+ 
+
+@media (min-width: 1024px) {
+
+    .project-grid {
+
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+}
+
+ 
+
+@media (max-width: 768px) {
+
+    .project-grid {
+
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+        gap: 10px;
+
+    }
+
+}
+
+ 
+
+@media (max-width: 600px) {
+
+    .project-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+}
+
+ 
+
+@media (max-width: 400px) {
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+}
+
+ 
+
+.project-card {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    min-width: 200px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    padding: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+.project-card.highlighted-card {
+
+    background-color: var(--green-primary);
+
+    color: var(--white-background);
+
    
+
+    
+
+}
+
+ 
+
+/* Highlight the last three project cards in light green */
+
+.project-grid .project-card:nth-last-child(-n+3) {
+
+    background-color: var(--green-light);
+
+}
+
+ 
+
+.project-grid .project-card:nth-last-child(-n+3) h3, .project-grid .project-card:first-child,
+
+.project-grid .project-card:nth-last-child(-n+3) .brief,
+
+.project-grid .project-card:nth-last-child(-n+3) .technologies,
+
+.project-grid .project-card:nth-last-child(-n+3) .responsibilities {
+
+    color: var(--text-color-primary);
+
+    font-family: Poppins;
+
+   font-weight: 400;
+
+   font-size: 19.36px;
+
+  line-height: 150%;
+
+  letter-spacing: 0%;
+
+  vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+/* Style the favorite heart on the first two cards to be burnt orange */
+
+.project-grid .project-card:nth-child(-n+2) .favorite-icon {
+
+    color: var(--burnt-orange);
+
+}
+
+ 
+
+/* Style the favorite heart on the last two cards to be washed-out orange (unfavorite) */
+
+.project-grid .project-card:nth-last-child(-n+2) .favorite-icon {
+
+    color: #DB8566;
+
+}
+
+ 
+
+.project-grid .project-card:first-child {
+
+    background-color: var(--green-primary);
+
+    color: var(--white-background);
+
+   
+
+}
+
+ 
+
+.project-grid .project-card:first-child .favorite-icon {
+
+    color: var(--burnt-orange);
+
+    
+
+    
+
+}
+
+ 
+
+.project-grid .project-card:first-child h3, .project-card h3,  
+
+.project-grid .project-card:first-child .brief,
+
+.project-grid .project-card:first-child .technologies,
+
+.project-grid .project-card:first-child .responsibilities {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.project-card .project-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+   
+
+}
+
+ 
+
+.project-card h3 {
+
+    font-size: 19.36px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    text-align: left;
+
+    color: var(--text-color-primary);
+
+  
+
+ 
+
+}
+
+ 
+
+.project-card.highlighted-card h3 {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.project-grid .project-card:first-child .project-year {
+
+    color: var(--white-background); /* Ensures the year is displayed in white */
+
+    font-family: Poppins;
+
+    font-weight: 400;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+}
+
+ 
+
+.project-card .brief,
+
+.project-card .technologies,
+
+.project-card .responsibilities {
+
+    color: var(--text-color-secondary);
+
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+
+    text-align: left;
+
+    font-family: Poppins;
+
+font-weight: 400;
+
+font-size: 19.36px;
+
+line-height: 150%;
+
+letter-spacing: 0%;
+
+vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+.project-card.highlighted-card .brief,
+
+.project-card.highlighted-card .technologies,
+
+.project-card.highlighted-card .responsibilities {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.project-card .technologies strong {
+
+    font-weight: bold;
+
+    color: var(--text-color-primary);
+
+}
+
+ 
+
+.project-card.highlighted-card .technologies strong {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.favorite-icon {
+
+    font-size: 14px;
+
+    color: #CCCCCC; /* Default unfavorited color (fallback) */
+
+    cursor: pointer;
+
+    padding: 6px;
+
+}
+
+ 
+
+.favorite-icon.active {
+
+    color: var(--red-primary); /* Active heart color */
+
+}
+
+ 
+
+.favorite-icon.orange-heart {
+
+    color: var(--burnt-orange);
+
+}
+
+ 
+
+/* Education and Tools Section */
+
+.education-tools-section {
+
+    grid-area: education-tools;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr; /* Set the ratio between Education and Tools */
+
+    gap: 20px; /* Ensure consistent spacing between Education and Tools */
+
+    align-items: end; /* Align both sections horizontally at the bottom */
+
+    width: 100%; /* Ensure full width */
+
+    max-width: 1440px; /* Match the container's max-width */
+
+    margin: 0 auto; /* Center the section within the parent container */
+
+    box-sizing: border-box; /* Include padding and borders in dimensions */
+
+}
+
+ 
+
+@media (min-width: 640px) {
+
+    .container {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+
+            "profile profile"
+
+            "skills skills"
+
+            "projects projects"
+
+            "education-tools education-tools"
+
+            "experience experience"
+
+            "contact contact";
+
+    }
+
+    .education-tools-section {
+
+        grid-template-columns: 2fr 1fr; /* Adjust the ratio as needed */
+
+        align-items: start; /* Align items to the top */
+
+    }
+
+}
+
+ 
+
+/* Education Section */
+
+.education-section {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    padding: 20px; /* Add spacing inside the section */
+
+    box-shadow: var(--box-shadow-light);
+
+    display: flex; /* Use flexbox for layout */
+
+    flex-direction: column; /* Stack items vertically */
+
+    gap: 20px; /* Add spacing between items */
+
+    width: 100%; /* Full width of its parent column */
+
+    box-sizing: border-box; /* Include padding and border in dimensions */
+
+}
+
+ 
+
+.education-section h2 {
+
+  
+
+    color: var(--text-color-primary);
+
+    margin-bottom: 16px;
+
+    text-align: left;
+
+    grid-column: span 2; /* Make the heading span the full width */
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 33.88px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+/* Base styling for education cards */
+
+.education-card {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 16px;
+
+    width: 100%; /* Ensure width is responsive */
+
+    height: auto;
+
+    text-align: left;
+
+    margin-bottom: 16px; /* Add spacing between sections (fallback for older browsers) */
+
+}
+
+ 
+
+.education-card:first-child {
+
+    background-color: var(--green-primary);
+
+    color: var(--white-background); /* White text for contrast */
+
+    border-left: 4px solid var(--green-primary); /* Optional: add a left border in green */
+
+    height: auto; /* Allow dynamic height based on content */
+
+    width: 926.61px;
+
+    text-align: left;
+
+    overflow: hidden; /* Ensure content does not overflow */
+
+    padding: 16px; /* Add proper padding to ensure spacing */
+
+    box-sizing: border-box; /* Include padding in dimensions */
+
+}
+
+ 
+
+/* Ensure white text for the first card's content */
+
+.education-card:first-child h3,
+
+.education-card:first-child .degree-dates,
+
+.education-card:first-child li {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+/* Highlight the last two education cards in light green */
+
+.education-card:nth-last-child(-n+2) {
+
+    background-color: var(--green-light); /* Light green background */
+
+    height: auto; /* Allow dynamic height based on content */
+
+    width: 926.61px;
+
+    text-align: left;
+
+    overflow: hidden; /* Prevent content overflow */
+
+    padding: 16px; /* Add proper padding */
+
+    box-sizing: border-box; /* Include padding in dimensions */
+
+}
+
+ 
+
+/* Last Education Card */
+
+.education-card:last-child {
+
+    height: 193.61px; /* Set height for the last section */
+
+    width: 926.61px; /* Set width for the last section */
+
+    margin: 0 auto; /* Center align the card horizontally */
+
+    background-color: var(--green-light); /* Optional: Maintain the light green background */
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 16px;
+
+    text-align: left;
+
+}
+
+ 
+
+.education-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: left;
+
+    font-family: Poppins, sans-serif;
+
+    font-weight: 500;
+
+    font-size: 33.88px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    text-align: left;
+
+    vertical-align: left;
+
+    margin-bottom: 16px;
+
+    grid-column: span 2;
+
+ 
+
+}
+
+ 
+
+.education-header h3 {
+
+    margin-bottom: 0;
+
+    text-align: left;
+
+    color: var(--text-color-primary);
+
+    font-family: Poppins;
+
+    font-weight: 400;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+.education-card:first-child .education-header h3 {
+
+    color: var(--white-background); /* White text for the first card header */
+
+}
+
+ 
+
+/* Styling for degree dates */
+
+.education-card .degree-dates {
+
+    font-size: 12px;
+
+    color: var(--text-color-secondary);
+
+    margin-bottom: 8px;
+
+    text-align: left;
+
+    font-family: Poppins;
+
+   font-weight: 400;
+
+   font-size: 19.36px;
+
+   line-height: 150%;
+
+   letter-spacing: 0%;
+
+   vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+.education-card:first-child .degree-dates {
+
+    color: var(--white-background); /* White text for the first card dates */
+
+}
+
+ 
+
+/* List styling for the education card */
+
+.education-card ul {
+
+    padding-left: 16px;
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.education-card li {
+
+    color: var(--text-color-secondary);
+
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+
+    text-align: left;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+    font-family: Poppins;
+
+    font-weight: 400;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle; 
+
+}
+
+ 
