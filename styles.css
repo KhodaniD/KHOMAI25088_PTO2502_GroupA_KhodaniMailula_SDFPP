@@ -1631,4 +1631,438 @@ vertical-align: middle;
 
 }
 
+/* Tools Section */
+
+.tools-section {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    padding: 20px; /* Add spacing inside the section */
+
+    box-shadow: var(--box-shadow-light);
+
+    display: flex; /* Use flexbox for layout */
+
+    flex-direction: column; /* Stack items vertically */
+
+    align-items: center; /* Center content horizontally */
+
+    justify-content: flex-end; /* Align content to the bottom */
+
+    gap: 20px; /* Add spacing between items */
+
+    width: 100%; /* Full width of its parent column */
+
+    box-sizing: border-box; /* Include padding and border in dimensions */
+
+    height: 100%; /* Match the height of Education Section */
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 19.36px;
+
+ 
+
+   
+
+}
+
+ 
+
+/* Tool Category */
+
+.tool-category {
+
+    background-color: var(--green-light);
+
+    padding: 12px; /* Adjust padding within categories */
+
+    border-radius: var(--border-radius-small);
+
+    box-shadow: var(--box-shadow-light); /* Optional for a slight shadow effect */
+
+    height: auto; /* Reset height to ensure proper spacing */
+
+   
+
+}
+
+ 
+
+/* First Category */
+
+.tool-category:first-child {
+
+    height: 274px; /* Set height for the first category */
+
+    width: 184px;
+
+    margin-bottom: 20px; /* Add space after the first category */
+
+}
+
+ 
+
+/* Second Category */
+
+.tool-category:nth-child(2) {
+
+    height: 152px; /* Set height for the second category */
+
+    width: 184px;
+
+    margin-bottom: 20px; /* Add space after the second category */
+
+}
+
+ 
+
+/* Third Category */
+
+.tool-category:nth-child(3) {
+
+    height: 198px; /* Set height for the third category */
+
+    width: 184px;
+
+    gap: 39px; /* Adjust gap for the third category */
+
+  
+
+}
+
+ 
+
+/* Tool Category Title */
+
+.tool-category h3 {
+
+    font-size: 1em;
+
+   
+
+    color: var(--text-color-primary);
+
+    margin-top: 0;
+
+    margin-bottom: 8px; /* Adjust margin for better spacing */
+
+    text-align: left;
+
+   
+
+    
+
+}
+
+ 
+
+/* Tool Icons */
+
+.tool-icons {
+
+    display: flex;
+
+    gap: 8px; /* Adjust gap between icons */
+
+    font-size: 1.1em;
+
+    color: var(--text-color-secondary);
+
+    align-items: center;
+
+    padding-bottom: 4px; /* Reduce padding below the icons */
+
+}
+
+    .tool-icons i {
+
+    width: 24px; /* Increase the width of the icons */
+
+    height: 24px; /* Increase the height of the icons */
+
+    font-size: 24px; /* Adjust font size to match the new dimensions */
+
+    display: inline-flex; /* Ensure proper alignment */
+
+    align-items: center; /* Center align vertically */
+
+    justify-content: center; /* Center align horizontally */
+
+}
+
+ 
+
+.tool-icons i:hover {
+
+    color: var(--green-primary);
+
+   
+
+}
+
+ 
+
+/* Experience Section */
+
+.experience-section {
+
+    grid-area: experience;
+
+    background-color: var(--white-background); /* Lighter green for the section background */
+
+    padding: 20px; /* Internal padding for the section */
+
+    border-radius: var(--border-radius-medium); /* Rounded corners */
+
+    box-shadow: var(--box-shadow-light); /* Subtle shadow */
+
+    display: flex; /* Use flexbox for layout */
+
+    flex-direction: column; /* Stack items vertically */
+
+    gap: 24px; /* Add vertical spacing between child elements */
+
+    box-sizing: border-box; /* Includes padding in the total dimensions */
+
+ 
+
+}
+
+ 
+
+.experience-section h2 {
+
+    font-size: 1.5em;
+
+    font-weight: 600;
+
+    color: var(--text-color-primary);
+
+    margin-bottom: 16px;
+
+    text-align: left;
+
+}
+
+ 
+
+/* Individual Job Card */
+
+.job {
+
+    background-color: var( --green-light); /* Changed background to white for better contrast within the light green section */
+
+    border-radius: var(--border-radius-medium); /* Rounded corners for job cards */
+
+    box-shadow: var(--box-shadow-light); /* Subtle shadow for job cards */
+
+    padding: 16px; /* Internal padding for job cards */
+
+    position: relative; /* For positioning any inner elements */
+
+ 
+
+}
+
+ 
+
+/* Specifically highlight the first job using a class */
+
+.job.first-job {
+
+    background-color: var(--green-primary); /* Dark green background for the first job */
+
+    color: var(--white-background); /* Ensure text is readable */
+
+    border-left: 5px solid var(--green-primary); /* Optional: add a left border in green */
+
+    padding: 16px;
+
+}
+
+ 
+
+/* Ensure white text for the first job's content */
+
+.job.first-job .job-details h3,
+
+.job.first-job .company-date,
+
+.job.first-job .job-description li {
+
+    color: var(--white-background);
+
+
+}
+
+ 
+
+.job-details {
+
+    display: flex;
+
+    flex-direction: column; /* Stack items vertically */
+
+    align-items: flex-start; /* Align items to the left */
+
+    margin-bottom: 8px;
+
+    font-size: 19.36px;
+
+}
+
+ 
+
+/* Position the Most Recent badge */
+
+.most-recent-badge {
+
+    background-color: var(--burnt-orange);
+
+    color: var(--white-background);
+
+    padding: 4px 8px;
+
+    border-radius: var(--border-radius-small);
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px; /* Place the badge on the top-right corner */
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 14.52px;
+
+    line-height: 155%;
+
+    letter-spacing: 0%;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+   text-transform: capitalize;
+
+ 
+
+}
+
+ 
+
+.job-details h3 {
+
+  
+
+    font-weight: bold;
+
+    color: var(--text-color-primary);
+
+    margin-bottom: 2px;
+
+    text-align: left;
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 24.2px;
+
+    line-height: 150%;
+
+letter-spacing: 0%;
+
+vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+.company-date {
+
+    font-size: 12px;
+
+    color: var(--text-color-secondary);
+
+    text-align: left; /* Ensure alignment to the left */
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+}
+
+ 
+
+.job-description {
+
+    padding-left: 16px;
+
+    margin-bottom: 0;
+
+    font-family: Poppins;
+
+font-weight: 500;
+
+font-size: 24.2px;
+
+line-height: 150%;
+
+letter-spacing: 0%;
+
+text-align: left;
+
+vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+.job-description li {
+
+    font-size: 12px;
+
+    color: var(--text-color-secondary);
+
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+
+    text-align: left;
+
+    font-family: Poppins;
+
+font-weight: 400;
+
+font-size: 19.36px;
+
+line-height: 150%;
+
+letter-spacing: 0%;
+
+vertical-align: middle;
+
+ 
+
+}
+
+ 
  
