@@ -1,55 +1,30 @@
 :root {
 
     --font-family: Poppins, sans-serif;
-
     --white-background: #FFFFFF;
-
     --text-color-primary: #000;
-
     --text-color-secondary: #4A4A4A;
-
     --line-height-primary: 1.6;
-
     --box-shadow-light: 0px 2px 2px #DADADA;
-
     --box-shadow-medium: 0px 3px 3px #DADADA;
-
     --border-radius-small: 6px;
-
     --border-radius-medium: 12px;
-
     --green-primary: #4A8B70;
-
     --green-light: #E7F0EC;
-
     --burnt-orange: #D76239;
-
- 
 
 }
 
- 
-
 /* General Styles */
-
     body {
-
         font-family: var(--font-family);
-
         margin: 0;
-
         color: var(--text-color-primary);
-
         line-height: var(--line-height-primary);
-
         display: flex;
-
         justify-content: center;
-
         align-items: flex-start;
-
         min-height: 100vh;
-
         padding: 20px;
 
     }
@@ -57,279 +32,154 @@
  
 
     .container {
-
         background-image: url(images/background\ \(1\).png);
-
         background-size: cover;
-
         background-position: center;
-
         background-repeat: no-repeat;
-
         border-radius: var(--border-radius-medium);
-
         box-shadow: var(--box-shadow-medium);
-
         padding: 24px;
-
         width: 100%; /* Ensure it takes up the full width of its parent */
-
         max-width: 1440px; /* Default max-width */
-
         margin-left: auto;
-
         margin-right: auto;
-
         display: grid;
-
         grid-template-columns: 1fr; /* Single-column layout by default */
-
         grid-template-rows: auto; /* Dynamic rows */
-
         grid-template-areas:
-
             "profile-picture"
-
             "profile-bio"
-
             "skills"
-
             "projects"
-
             "education-tools"
-
             "experience"
-
             "contact"; /* Ensure Contact section is included */
-
         gap: 20px;
-
         overflow: visible; /* Allow content to overflow if necessary */
-
         box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
-
     }
 
-   
-
     /* For larger screens, set up the two-column layout */
-
     @media (min-width: 768px) {
-
         .container {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr; /* Two equal columns */
-
             grid-template-areas:
-
                 "profile profile"
-
                 "skills skills"
-
                 "projects projects"
-
                 "education-tools education-tools"
-
                 "experience experience"
-
                 "contact contact"; /* Ensure Contact section is included */
-
             max-width: 1342px;
-
             gap: 20px;
-
         }
 
     }
 
 .section-bg {
-
     background-color: var(--white-background);
-
     border-radius: var(--border-radius-medium);
-
     padding: 20px;
 
 }
 
- 
-
+/* Section Headings */
 h2 {
-
     font-size: 1.5em;
-
     font-weight: 600;
-
     color: var(--text-color-primary);
-
     margin-top: 0;
-
     margin-bottom: 16px;
-
     text-align: left;
-
 }
 
 /* Profile Section */
-
 .profile-section {
-
     grid-area: profile;
-
     display: grid;
-
     grid-template-columns: auto 1fr;
-
     align-items: stretch;
-
     gap: 10px;
-
     background-color: transparent;
-
     border-radius: 29.04px;
-
     padding: 0;
-
-     
-
+  
 }
 
- 
-
 .profile-img {
-
         width: 300.1px;
-
         height: 300.1px;
-
         top: 63px;
-
         left: 59px;
-
         border-radius: 29.04px;
-
         background-color: transparent;
-
         object-fit: cover;
 
       }
 
  
-
       .profile-bio-container {
-
         background-color: var(--white-background);
-
         border-radius: var(--border-radius-medium);
-
         padding: 20px;
-
         box-shadow: var(--box-shadow-light);
-
         display: flex; /* Use flexbox for layout */
-
-        flex-direction: column; /* Stack items vertically */
-
+        flex-direction: column; /* Stack items vertically *
         justify-content: center; /* Center items vertically */
-
         align-items: center; /* Center items horizontally */
-
         text-align: center; /* Ensure text is centered */
 
     }
 
  
-
 .intro .name {
-
         font-weight: bold;
-
         font-family: Poppins;
-
         color: #000;
-
         text-align: left;
-
         margin-bottom: 16px;  
-
         font-weight: 600;
-
         font-size: 36px;
-
         line-height: 104%;
-
         letter-spacing: 0%;
-
         vertical-align: middle;
-
- 
 
 }
 
  
 
 .intro .bio {
-
     font-size: 16px;
-
     font-weight: normal;
-
     color: #4A4A4A;
-
     line-height:  24px;;
-
     max-width: none;
-
     text-align: left;
-
     width: 856px;
-
     height: 132px;
-
     margin: 0;
-
     font-family: Poppins;
-
     font-weight: 400;
-
     font-size: 22px;
-
     line-height: 151%;
-
     letter-spacing: 0%;
-
     vertical-align: middle;
-
- 
 
 }
 
  
-
 @media (max-width: 639px) {
-
     .profile-section {
-
         display: flex;
-
         flex-direction: row;
-
         align-items: center;
-
         gap: 12px;
-
         padding: 12px;
-
         width: 100%;
-
         box-sizing: border-box;
-
         margin-bottom: 10px;
-
         flex-wrap: nowrap; /* Ensure items don’t wrap */
-
         overflow: hidden; /* Prevent content overflow */
 
     }
@@ -337,21 +187,13 @@ h2 {
  
 
     .profile-img {
-
         width: 35%; /* Responsive width */
-
         height: auto;
-
         border-radius: 12px;
-
         width: 100%;
-
         height: 137px;
-
         max-width: 147px;
-
         object-fit: cover;
-
         flex-shrink: 0;
 
     }
@@ -359,67 +201,36 @@ h2 {
  
 
     .profile-bio-container {
-
         border-radius: 12px;
-
         margin-bottom: 0;
-
         width: 163px;
-
         display: flex;
-
         padding: 12px;
-
         text-align: left;
-
         background: var(--white-background);
-
-       
-
     }
 
- 
-
     .intro .name {
-
         font-size: 14px;
-
         font-weight: bold;
-
         margin-bottom: 6px;
 
     }
 
- 
-
     .intro .bio {
-
         font-size: 12px;
-
         line-height: 1.4;
-
         margin: 0;
-
         word-break: break-word;
-
         width: 163px;
-
         height: 137px;
-
         display: flex;
-
         justify-content: space-between;
-
         padding: 12px;
-
         text-align: left;
-
         background: var(--color-white);
-
         border-radius: 12px;
-
         margin-bottom: 0;
-
         top: 18px;
 
         left: 197px;
@@ -2132,7 +1943,28 @@ vertical-align: middle;
 
 }
 
- 
+/* Footer Section */
+.footer-section {
+    background-color: var(--green-primary);
+    color: var(--white-background);
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow-light);
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section a {
+    color: var(--white-background);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer-section a:hover {
+    color: var(--burnt-orange);
+}
 
  
  
