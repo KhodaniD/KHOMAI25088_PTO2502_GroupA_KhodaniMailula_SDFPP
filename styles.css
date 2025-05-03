@@ -2060,9 +2060,79 @@ letter-spacing: 0%;
 
 vertical-align: middle;
 
- 
+}
+
+.contact-section {
+
+    grid-area: contact; /* Ensure it matches the grid-template-areas */
+
+    background-color: var(--burnt-orange); /* Background color */
+
+    color: var(--white-background); /* Text color */
+
+    padding: 20px; /* Add padding */
+
+    border-radius: var(--border-radius-medium); /* Rounded corners */
+
+    box-shadow: var(--box-shadow-light); /* Add a subtle shadow */
+
+    text-align: center; /* Center text inside the section */
 
 }
+
+ 
+
+/* Contact Section Heading */
+
+.contact-section h2 {
+
+    font-size: 1.5em;
+
+    font-weight: 600;
+
+    margin-bottom: 16px;
+
+    color: var(--white-background); /* White text for contrast */
+
+}
+
+ 
+
+/* Contact Section Content */
+
+.contact-section p {
+
+    margin-bottom: 12px;
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 19.36px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+    color: var(--white-background); /* Ensure text is visible */
+
+}
+
+ 
+
+.contact-section a {
+
+    color: var(--white-background);
+
+    text-decoration: underline;
+
+    font-weight: bold;
+
+}
+
+ 
 
  
  
