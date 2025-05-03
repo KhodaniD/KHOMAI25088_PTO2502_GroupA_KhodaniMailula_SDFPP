@@ -460,4 +460,386 @@ h2 {
 
     }
 
-    
+    /* Skills Proficiency Section */
+
+.skills-proficiency-section {
+
+    grid-area: skills;
+  
+    margin-top: 2rem;
+  
+    margin-bottom: 2rem;
+  
+    display: grid;
+  
+    grid-template-columns: 1fr; /* Default single column */
+  
+    gap: 10px;
+  
+    font-family: Poppins;
+  
+  font-weight: 500;
+  
+  font-size: 24.2px;
+  
+  line-height: 150%;
+  
+  letter-spacing: 0%;
+  
+  vertical-align: middle;
+  
+   
+  
+  }
+  
+   
+  
+  /* Heading Styles */
+  
+  .skills-proficiency-section h2 {
+  
+    grid-column: 1 / -1;
+  
+    font-size: 1.8rem;
+  
+    font-weight: 700;
+  
+    color: var(--text-color-primary);
+  
+    text-align: left;
+  
+    margin-bottom: 1.5rem;
+  
+   
+  
+  }
+  
+   
+  
+  /* Card Styles */
+  
+  .skills-proficiency-section .card {
+  
+    background-color: var(--white-background);
+  
+    padding: 2rem;
+  
+    border-radius: var(--border-radius-medium);
+  
+    box-shadow: var(--box-shadow-medium);
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 1rem;
+  
+  }
+  
+   
+  
+  /* Proficiency Card Styles */
+  
+  .proficiency-card {
+  
+      width: 563.9px;
+  
+      height: auto;
+  
+      max-height: 428.37px;
+  
+      border-radius: 29.04px;
+  
+      padding-top: 41px;
+  
+      padding-right: 28px;
+  
+      padding-bottom: 41px;
+  
+      padding-left: 28px;
+  
+      gap: 10px;
+  
+      background-color: var(--white-background);
+  
+      box-shadow: var(--box-shadow-medium);
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      box-sizing: border-box;
+  
+      overflow: hidden;
+  
+       
+  
+  }
+  
+   
+  
+  .proficiency-card h3 {
+  
+    font-size: 1.5rem;
+  
+    font-weight: 600;
+  
+    margin-bottom: 1rem;
+  
+    font-family: Poppins;
+  
+  font-weight: 500;
+  
+  font-size: 33.88px;
+  
+  line-height: 150%;
+  
+  letter-spacing: 0%;
+  
+  vertical-align: middle;
+  
+   
+  
+  }
+  
+   
+  
+  .proficiency-list {
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 1rem;
+  
+    font-family: Poppins;
+  
+  font-weight: 500;
+  
+  font-size: 24.2px;
+  
+  line-height: 104%;
+  
+  letter-spacing: 0%;
+  
+  text-align: center;
+  
+  vertical-align: middle;
+  
+   
+  
+  }
+  
+   
+  
+  .proficiency-item {
+  
+    display: flex;
+  
+  justify-content: space-between;
+  
+    align-items: center;
+  
+  }
+  
+   
+  
+  .progress-bar {
+  
+    height: 26.6px;
+  
+    border-radius: var(--border-radius-small);
+  
+    background-color: var(--grey-background);
+  
+  }
+  
+   
+  
+  .progress-bar.beginner {
+  
+    width: 30%;
+  
+    background-color: var(--green-primary);
+  
+  }
+  
+   
+  
+  .progress-bar.intermediate {
+  
+    width: 60%;
+  
+    background-color: var(--green-primary);
+  
+  }
+  
+   
+  
+  .progress-bar.advanced {
+  
+    width: 90%;
+  
+    background-color: var(--green-primary);
+  
+  }
+  
+   
+  
+  /* Skills Card Styles */
+  
+  .skills-card {
+  
+      width: 100%;
+  
+      max-width: 706px;
+  
+      height: auto;
+  
+      max-height: 429px;
+  
+      border-radius: 29.04px;
+  
+      padding: 28px;
+  
+      gap: 39px;
+  
+      background-color: var(--white-background);
+  
+      box-shadow: var(--box-shadow-medium);
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      box-sizing: border-box;
+  
+      overflow: hidden;
+  
+  }
+  
+   
+  
+  .skills-card h3 {
+  
+  font-family: Poppins;
+  
+  font-weight: 500;
+  
+  font-size: 33.88px;
+  
+  line-height: 150%;
+  
+  letter-spacing: 0%;
+  
+  text-align: left;
+  
+  vertical-align: middle;
+  
+   
+  
+  }
+  
+   
+  
+  .tag-list {
+  
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    gap: 0.75rem;
+  
+  }
+  
+   
+  
+  .tag {
+  
+    background-color: var(--green-light);
+  
+    padding: 0.5rem 1rem;
+  
+    border-radius: 2rem;
+  
+    color: var(--text-color-primary);
+  
+    text-align: center;
+  
+    white-space: nowrap;
+  
+    font-family: Poppins;
+  
+    font-weight: 400;
+  
+    font-size: 24.2px;
+  
+    line-height: 150%;
+  
+    letter-spacing: 0%;
+  
+    text-align: center;
+  
+    vertical-align: middle;
+  
+    text-transform: capitalize;
+  
+   
+  
+  }
+  
+   
+  
+  /* Responsive Adjustments for Skills Proficiency Section */
+  
+  @media (min-width: 768px) {
+  
+      .skills-proficiency-section {
+  
+          display: grid;
+  
+          grid-template-columns: auto auto; /* Let content size columns */
+  
+          grid-template-areas: "proficiency-card skills-card";
+  
+          gap: 24px; /* Gap between the cards */
+  
+          justify-content: start; /* Align to the start */
+  
+      }
+  
+  }
+  
+   
+  
+  @media (max-width: 768px) {
+  
+      .skills-proficiency-section {
+  
+        grid-template-columns: 1fr;
+  
+        gap: 1rem;
+  
+        margin-top: 1rem; /* Reduced top margin - ensure this is 1rem */
+  
+        margin-bottom: 1rem;
+  
+      }
+  
+   
+  
+      .proficiency-card,
+  
+      .skills-card {
+  
+        width: 100%;
+  
+        max-width: none;
+  
+        max-height: none;
+  
+      }
+  
+  }
+  
+   
