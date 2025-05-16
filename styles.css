@@ -4,40 +4,24 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
- 
-
 :root {
 
     --font-family: Poppins, Arial, Helvetica, sans-serif;
-
     --white-background: #FFFFFF;
-
     --text-color-primary: #000;
-
     --text-color-secondary: #4A4A4A;
-
     --line-height-primary: 1.6;
-
     --box-shadow-light: 0px 2px 2px #DADADA;
-
     --box-shadow-medium: 0px 3px 3px #DADADA;
-
     --border-radius-small: 6px;
-
     --border-radius-medium: 12px;
-
     --green-primary: #4A8B70;
-
     --green-light: #E7F0EC;
-
     --burnt-orange: #D76239;
-
     --red-primary: #FF0000;
-
 }
 
  
-
 /* --- Base Styles --- */
 
 /* Styles applied to all screen sizes unless overridden by media queries.
@@ -47,131 +31,75 @@
 body {
 
     font-family: var(--font-family);
-
     margin: 0;
-
     color: var(--text-color-primary);
-
     line-height: var(--line-height-primary);
-
     display: flex;
-
     justify-content: center;
-
     align-items: flex-start;
-
     min-height: 100vh;
-
     padding: 15px;
-
     box-sizing: border-box;
-
     background-color: #f0f0f0;
 
 }
 
- 
-
 .container {
-
     background-image: url(images/background\ \(1\).png);
-
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
-
     border-radius: var(--border-radius-medium);
-
     box-shadow: var(--box-shadow-medium);
-
     padding: 15px;
-
     width: 100%;
-
     max-width: 1440px;
-
     margin-left: auto;
-
     margin-right: auto;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 15px;
-
     overflow: visible;
-
     box-sizing: border-box;
 
 }
-
- 
 
 /* Profile Section */
 
 /* Default: Flex row for mobile/tablet */
 
 .profile-section {
-
     display: flex;
-
     flex-direction: row;
-
     align-items: center;
-
     gap: 15px;
-
     padding: 10px;
-
     background-color: transparent;
-
     box-shadow: none;
 
 }
 
- 
-
 .profile-img {
-
     width: 100px;
-
     height: 100px;
-
     border-radius: var(--border-radius-medium);
-
     object-fit: cover;
-
     flex-shrink: 0;
-
 }
 
  
 
 .profile-bio-container {
-
     display: flex;
-
     flex-direction: column;
-
     flex-grow: 1;
-
     padding: 12px;
-
     background: var(--white-background);
-
     box-shadow: var(--box-shadow-light);
-
     border-radius: var(--border-radius-medium);
-
     text-align: left;
-
     align-items: flex-start;
-
     width: auto;
-
     box-sizing: border-box;
 
 }
@@ -179,15 +107,10 @@ body {
  
 
 .intro .name {
-
     font-size: 18px;
-
     font-weight: 600;
-
     margin-bottom: 4px;
-
     line-height: 1.2;
-
     text-align: left;
 
 }
@@ -195,15 +118,10 @@ body {
  
 
 .intro .bio {
-
     font-size: 14px;
-
     line-height: 1.4;
-
     margin: 0;
-
     text-align: left;
-
     word-break: break-word;
 
 }
@@ -213,63 +131,39 @@ body {
 /* Skills & Proficiency Section */
 
 .skills-proficiency-section {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 15px;
-
-  
-
 }
 
  
 
 .skills-proficiency-section .card {
-
     padding: 15px;
-
     gap: 1rem;
-
     background-color: var(--white-background);
-
     border-radius: var(--border-radius-medium);
-
     box-shadow: var(--box-shadow-medium);
-
     display: flex;
-
     flex-direction: column;
 
 }
 
  
-
 .proficiency-card h2,
-
 .skills-card h2,
-
 .proficiency-card h3,
-
 .skills-card h3 {
-
     font-size: 1.1em;
-
     font-weight: 600;
-
     margin-bottom: 1rem;
-
 }
 
  
 
 .proficiency-list {
-
     display: grid;
-
     grid-template-columns: 1fr; /* one column stack */
-
     gap: 24px;
 
 }
@@ -277,9 +171,7 @@ body {
  
 
 .proficiency-item {
-
     display: flex;
-
   align-items: center;
 
 }
@@ -287,53 +179,29 @@ body {
  
 
 .progress-bar {
-
     height: 26.62px;
-
     width: 100%;
-
     border-radius: var(--border-radius-small);
-
     border-radius: 7.26px;
-
     margin-left: 10px;
-
     gap: 24px;
-
     flex-shrink: 0;
-
- 
 
     }
 
- 
-
 .progress-bar.beginner {
-
     width: 30%;
-
     background-color: var(--green-primary);
-
-   
-
 }
-
- 
 
 .progress-bar.intermediate {
-
     width: 60%;
-
     background-color: var(--green-primary);
 
 }
 
- 
-
 .progress-bar.advanced {
-
     width: 90%;
-
     background-color: var(--green-primary);
 
 }
@@ -341,9 +209,7 @@ body {
  
 
 .skills-card h2 {
-
     font-weight: 600;
-
     margin-bottom: 1rem;
 
 }
@@ -351,15 +217,10 @@ body {
  
 
 .tag-list {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 0.5rem;
-
     width: 100%;
-
     box-sizing: border-box;
 
 }
@@ -367,23 +228,14 @@ body {
  
 
 .tag {
-
     background-color: var(--green-light);
-
     padding: 0.3rem 0.5rem;
-
     border-radius: 1rem;
-
     color: var(--text-color-primary);
-
     text-align: center;
-
     white-space: nowrap;
-
     font-size: 0.8em;
-
     line-height: 1.5;
-
     text-transform: capitalize;
 
 }
@@ -393,25 +245,16 @@ body {
 /* Projects Section */
 
 .projects-section {
-
     padding: 15px;
-
     background-color: var(--white-background);
-
     border-radius: var(--border-radius-medium);
-
     box-shadow: var(--box-shadow-light);
 
 }
 
- 
-
 .projects-section h2 {
-
     font-size: 1.3em;
-
     margin-bottom: 12px;
-
     text-align: left;
 
 }
@@ -419,11 +262,8 @@ body {
  
 
 .project-grid {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 15px;
 
 }
@@ -431,19 +271,12 @@ body {
  
 
 .project-card {
-
     position: relative;
-
     background-color: var(--white-background);
-
     border-radius: var(--border-radius-medium);
-
     box-shadow: var(--box-shadow-light);
-
     padding: 12px;
-
     display: block;
-
     box-sizing: border-box;
 
 }
