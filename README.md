@@ -70,7 +70,7 @@ The `styles.css` file is linked in the `<head>` of `index.html` and will be auto
 * LinkedIn: [https://www.linkedin.com/in/khodani-mailula-32a75730/](https://www.linkedin.com/in/khodani-mailula-32a75730/)
 
 * GitHub: [https://github.com/KhodaniD](https://github.com/KhodaniD)
-* Presentation link: https://teams.microsoft.com/l/meetingrecap?driveId=b%21GekOCQd_xkG6T9wKTEVO69r9KfDLr-5HtnhIPhcrp49ykknPLmQFSpQcyH3Ts_a1&driveItemId=01ELK2QQF6G7SIT2PFHBBZJJH7775OEUJN&sitePath=https%3A%2F%2Fabsacorp-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Fkhodani_mailula_absa_africa%2FEb435Inp5ThDlKT___riUS0BJcnsz8X-JqQJM2R9dx5JZA&fileUrl=https%3A%2F%2Fabsacorp-my.sharepoint.com%2Fpersonal%2Fkhodani_mailula_absa_africa%2FDocuments%2FRecordings%2FPresentation%2520Prep-20250503_235518-Meeting%2520Recording.mp4%3Fweb%3D1&threadId=19%3Ameeting_MTIxNWYyOGQtZjhmNC00NzllLWJmYTUtNWNkMjk3NjRlNDQ4%40thread.v2&organizerId=a2290e85-e90a-42af-9a8c-71a9a527b015&tenantId=5be1f46d-495f-465b-9507-996e8c8cdcb6&callId=65e4fcae-1d91-41f1-ae63-abb9accff7ec&threadType=Meeting&meetingType=MeetNow&subType=RecapSharingLink_RecapCore
+* Presentation link: https://www.veed.io/view/efcb4362-f577-4713-a197-7ea6727025f1?panel=share 
 
  
 ## Acknowledgements
