@@ -1,798 +1,108 @@
+/* * Global Styles */
+
+ 
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+ 
+
 :root {
 
-    --font-family: Poppins, sans-serif;
+    --font-family: Poppins, Arial, Helvetica, sans-serif;
+
     --white-background: #FFFFFF;
+
     --text-color-primary: #000;
+
     --text-color-secondary: #4A4A4A;
+
     --line-height-primary: 1.6;
+
     --box-shadow-light: 0px 2px 2px #DADADA;
+
     --box-shadow-medium: 0px 3px 3px #DADADA;
+
     --border-radius-small: 6px;
+
     --border-radius-medium: 12px;
+
     --green-primary: #4A8B70;
+
     --green-light: #E7F0EC;
+
     --burnt-orange: #D76239;
 
-}
-
-/* General Styles */
-    body {
-        font-family: var(--font-family);
-        margin: 0;
-        color: var(--text-color-primary);
-        line-height: var(--line-height-primary);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        min-height: 100vh;
-        padding: 20px;
-
-    }
-
- 
-
-    .container {
-        background-image: url(images/background\ \(1\).png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: var(--border-radius-medium);
-        box-shadow: var(--box-shadow-medium);
-        padding: 24px;
-        width: 100%; /* Ensure it takes up the full width of its parent */
-        max-width: 1440px; /* Default max-width */
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
-        grid-template-columns: 1fr; /* Single-column layout by default */
-        grid-template-rows: auto; /* Dynamic rows */
-        grid-template-areas:
-            "profile-picture"
-            "profile-bio"
-            "skills"
-            "projects"
-            "education-tools"
-            "experience"
-            "contact"; /* Ensure Contact section is included */
-        gap: 20px;
-        overflow: visible; /* Allow content to overflow if necessary */
-        box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
-    }
-
-    /* For larger screens, set up the two-column layout */
-    @media (min-width: 768px) {
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns */
-            grid-template-areas:
-                "profile profile"
-                "skills skills"
-                "projects projects"
-                "education-tools education-tools"
-                "experience experience"
-                "contact contact"; /* Ensure Contact section is included */
-            max-width: 1342px;
-            gap: 20px;
-        }
-
-    }
-
-.section-bg {
-    background-color: var(--white-background);
-    border-radius: var(--border-radius-medium);
-    padding: 20px;
-
-}
-
-/* Section Headings */
-h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: var(--text-color-primary);
-    margin-top: 0;
-    margin-bottom: 16px;
-    text-align: left;
-}
-
-/* Profile Section */
-.profile-section {
-    grid-area: profile;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: stretch;
-    gap: 10px;
-    background-color: transparent;
-    border-radius: 29.04px;
-    padding: 0;
-  
-}
-
-.profile-img {
-        width: 300.1px;
-        height: 300.1px;
-        top: 63px;
-        left: 59px;
-        border-radius: 29.04px;
-        background-color: transparent;
-        object-fit: cover;
-
-      }
-
- 
-      .profile-bio-container {
-        background-color: var(--white-background);
-        border-radius: var(--border-radius-medium);
-        padding: 20px;
-        box-shadow: var(--box-shadow-light);
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack items vertically *
-        justify-content: center; /* Center items vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Ensure text is centered */
-
-    }
-
- 
-.intro .name {
-        font-weight: bold;
-        font-family: Poppins;
-        color: #000;
-        text-align: left;
-        margin-bottom: 16px;  
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 104%;
-        letter-spacing: 0%;
-        vertical-align: middle;
+    --red-primary: #FF0000;
 
 }
 
  
 
-.intro .bio {
-    font-size: 16px;
-    font-weight: normal;
-    color: #4A4A4A;
-    line-height:  24px;;
-    max-width: none;
-    text-align: left;
-    width: 856px;
-    height: 132px;
+/* --- Base Styles --- */
+
+/* Styles applied to all screen sizes unless overridden by media queries.
+
+   Acts as the mobile-first baseline. */
+
+body {
+
+    font-family: var(--font-family);
+
     margin: 0;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 151%;
-    letter-spacing: 0%;
-    vertical-align: middle;
 
-}
-
- 
-@media (max-width: 639px) {
-    .profile-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-        padding: 12px;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        flex-wrap: nowrap; /* Ensure items don’t wrap */
-        overflow: hidden; /* Prevent content overflow */
-
-    }
-
- 
-
-    .profile-img {
-        width: 35%; /* Responsive width */
-        height: auto;
-        border-radius: 12px;
-        width: 100%;
-        height: 137px;
-        max-width: 147px;
-        object-fit: cover;
-        flex-shrink: 0;
-
-    }
-
- 
-
-    .profile-bio-container {
-        border-radius: 12px;
-        margin-bottom: 0;
-        width: 163px;
-        display: flex;
-        padding: 12px;
-        text-align: left;
-        background: var(--white-background);
-    }
-
-    .intro .name {
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 6px;
-
-    }
-
-    .intro .bio {
-        font-size: 12px;
-        line-height: 1.4;
-        margin: 0;
-        word-break: break-word;
-        width: 163px;
-        height: 137px;
-        display: flex;
-        justify-content: space-between;
-        padding: 12px;
-        text-align: left;
-        background: var(--color-white);
-        border-radius: 12px;
-        margin-bottom: 0;
-        top: 18px;
-
-        left: 197px;
-
-        font-family: Poppins;
-
- 
-
-    }
-
-}
-
- 
-
-    /* Ensure the container adapts for small screens */
-
-    .container {
-
-        grid-template-areas:
-
-            "profile"
-
-            "skills"
-
-            "projects"
-
-            "education-tools"
-
-            "experience"
-
-            "contact";
-
-        display: grid;
-
-        grid-template-columns: 1fr; /* Single-column layout for small screens */
-
-        gap: 20px; /* Add uniform gap between sections */
-
-    }
-
-    /* Skills Proficiency Section */
-
-.skills-proficiency-section {
-
-    grid-area: skills;
-  
-    margin-top: 2rem;
-  
-    margin-bottom: 2rem;
-  
-    display: grid;
-  
-    grid-template-columns: 1fr; /* Default single column */
-  
-    gap: 10px;
-  
-    font-family: Poppins;
-  
-  font-weight: 500;
-  
-  font-size: 24.2px;
-  
-  line-height: 150%;
-  
-  letter-spacing: 0%;
-  
-  vertical-align: middle;
-  
-   
-  
-  }
-  
-   
-  
-  /* Heading Styles */
-  
-  .skills-proficiency-section h2 {
-  
-    grid-column: 1 / -1;
-  
-    font-size: 1.8rem;
-  
-    font-weight: 700;
-  
     color: var(--text-color-primary);
-  
-    text-align: left;
-  
-    margin-bottom: 1.5rem;
-  
-   
-  
-  }
-  
-   
-  
-  /* Card Styles */
-  
-  .skills-proficiency-section .card {
-  
-    background-color: var(--white-background);
-  
-    padding: 2rem;
-  
+
+    line-height: var(--line-height-primary);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background-color: #f0f0f0;
+
+}
+
+ 
+
+.container {
+
+    background-image: url(images/background\ \(1\).png);
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
     border-radius: var(--border-radius-medium);
-  
+
     box-shadow: var(--box-shadow-medium);
-  
+
+    padding: 15px;
+
+    width: 100%;
+
+    max-width: 1440px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
     display: flex;
-  
+
     flex-direction: column;
-  
-    gap: 1rem;
-  
-  }
-  
-   
-  
-  /* Proficiency Card Styles */
-  
-  .proficiency-card {
-  
-      width: 563.9px;
-  
-      height: auto;
-  
-      max-height: 428.37px;
-  
-      border-radius: 29.04px;
-  
-      padding-top: 41px;
-  
-      padding-right: 28px;
-  
-      padding-bottom: 41px;
-  
-      padding-left: 28px;
-  
-      gap: 10px;
-  
-      background-color: var(--white-background);
-  
-      box-shadow: var(--box-shadow-medium);
-  
-      display: flex;
-  
-      flex-direction: column;
-  
-      box-sizing: border-box;
-  
-      overflow: hidden;
-  
-       
-  
-  }
-  
-   
-  
-  .proficiency-card h3 {
-  
-    font-size: 1.5rem;
-  
-    font-weight: 600;
-  
-    margin-bottom: 1rem;
-  
-    font-family: Poppins;
-  
-  font-weight: 500;
-  
-  font-size: 33.88px;
-  
-  line-height: 150%;
-  
-  letter-spacing: 0%;
-  
-  vertical-align: middle;
-  
-   
-  
-  }
-  
-   
-  
-  .proficiency-list {
-  
-    display: flex;
-  
-    flex-direction: column;
-  
-    gap: 1rem;
-  
-    font-family: Poppins;
-  
-  font-weight: 500;
-  
-  font-size: 24.2px;
-  
-  line-height: 104%;
-  
-  letter-spacing: 0%;
-  
-  text-align: center;
-  
-  vertical-align: middle;
-  
-   
-  
-  }
-  
-   
-  
-  .proficiency-item {
-  
-    display: flex;
-  
-  justify-content: space-between;
-  
-    align-items: center;
-  
-  }
-  
-   
-  
-  .progress-bar {
-  
-    height: 26.6px;
-  
-    border-radius: var(--border-radius-small);
-  
-    background-color: var(--grey-background);
-  
-  }
-  
-   
-  
-  .progress-bar.beginner {
-  
-    width: 30%;
-  
-    background-color: var(--green-primary);
-  
-  }
-  
-   
-  
-  .progress-bar.intermediate {
-  
-    width: 60%;
-  
-    background-color: var(--green-primary);
-  
-  }
-  
-   
-  
-  .progress-bar.advanced {
-  
-    width: 90%;
-  
-    background-color: var(--green-primary);
-  
-  }
-  
-   
-  
-  /* Skills Card Styles */
-  
-  .skills-card {
-  
-      width: 100%;
-  
-      max-width: 706px;
-  
-      height: auto;
-  
-      max-height: 429px;
-  
-      border-radius: 29.04px;
-  
-      padding: 28px;
-  
-      gap: 39px;
-  
-      background-color: var(--white-background);
-  
-      box-shadow: var(--box-shadow-medium);
-  
-      display: flex;
-  
-      flex-direction: column;
-  
-      box-sizing: border-box;
-  
-      overflow: hidden;
-  
-  }
-  
-   
-  
-  .skills-card h3 {
-  
-  font-family: Poppins;
-  
-  font-weight: 500;
-  
-  font-size: 33.88px;
-  
-  line-height: 150%;
-  
-  letter-spacing: 0%;
-  
-  text-align: left;
-  
-  vertical-align: middle;
-  
-   
-  
-  }
-  
-   
-  
-  .tag-list {
-  
-    display: flex;
-  
-    flex-wrap: wrap;
-  
-    gap: 0.75rem;
-  
-  }
-  
-   
-  
-  .tag {
-  
-    background-color: var(--green-light);
-  
-    padding: 0.5rem 1rem;
-  
-    border-radius: 2rem;
-  
-    color: var(--text-color-primary);
-  
-    text-align: center;
-  
-    white-space: nowrap;
-  
-    font-family: Poppins;
-  
-    font-weight: 400;
-  
-    font-size: 24.2px;
-  
-    line-height: 150%;
-  
-    letter-spacing: 0%;
-  
-    text-align: center;
-  
-    vertical-align: middle;
-  
-    text-transform: capitalize;
-  
-   
-  
-  }
-  
-   
-  
-  /* Responsive Adjustments for Skills Proficiency Section */
-  
-  @media (min-width: 768px) {
-  
-      .skills-proficiency-section {
-  
-          display: grid;
-  
-          grid-template-columns: auto auto; /* Let content size columns */
-  
-          grid-template-areas: "proficiency-card skills-card";
-  
-          gap: 24px; /* Gap between the cards */
-  
-          justify-content: start; /* Align to the start */
-  
-      }
-  
-  }
-  
-   
-  
-  @media (max-width: 768px) {
-  
-      .skills-proficiency-section {
-  
-        grid-template-columns: 1fr;
-  
-        gap: 1rem;
-  
-        margin-top: 1rem; /* Reduced top margin - ensure this is 1rem */
-  
-        margin-bottom: 1rem;
-  
-      }
-  
-   
-  
-      .proficiency-card,
-  
-      .skills-card {
-  
-        width: 100%;
-  
-        max-width: none;
-  
-        max-height: none;
-  
-      }
-  
-  }
-  
-   /* Projects Section */
-
-.projects-section {
-
-    grid-area: projects;
-
-    background-color: var(--white-background);
-
-    padding: 20px;
-
-    border-radius: var(--border-radius-medium);
-
-    box-shadow: var(--box-shadow-light);
-
-}
-
- 
-
-.project-year {
-
-    font-size: 0.9em;
-
-    font-style: italic;
-
-    color: var(--text-color-secondary);
-
-    margin-bottom: 4px; /* Add spacing below the year */
-
-    text-align: left; /* Align the year to the left */
-
-}
-
-.projects-section h2 {
-
-  font-family: Poppins;
-
-  font-weight: 500;
-
-  font-size: 33.88px;
-
-  line-height: 150%;
-
-  letter-spacing: 0%;
-
-  text-align: center;
-
-  vertical-align: middle;
-
-}
-
-
-
-
-.project-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 15px;
 
-}
-
- 
-
-@media (min-width: 1024px) {
-
-    .project-grid {
-
-        grid-template-columns: repeat(4, 1fr);
-
-    }
-
-}
-
- 
-
-@media (max-width: 768px) {
-
-    .project-grid {
-
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
-        gap: 10px;
-
-    }
-
-}
-
- 
-
-@media (max-width: 600px) {
-
-    .project-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 10px;
-
-    }
-
-}
-
- 
-
-@media (max-width: 400px) {
-
-    .project-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-
-    }
-
-}
-
- 
-
-.project-card {
-
-    background-color: var(--white-background);
-
-    border-radius: var(--border-radius-medium);
-
-    box-shadow: var(--box-shadow-light);
-
-    min-width: 200px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    padding: 16px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-start;
+    overflow: visible;
 
     box-sizing: border-box;
 
@@ -800,111 +110,341 @@ h2 {
 
  
 
-.project-card.highlighted-card {
+/* Profile Section */
 
-    background-color: var(--green-primary);
+/* Default: Flex row for mobile/tablet */
 
-    color: var(--white-background);
+.profile-section {
 
-   
+    display: flex;
 
-    
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px;
+
+    background-color: transparent;
+
+    box-shadow: none;
 
 }
 
  
 
-/* Highlight the last three project cards in light green */
+.profile-img {
 
-.project-grid .project-card:nth-last-child(-n+3) {
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: var(--border-radius-medium);
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+}
+
+ 
+
+.profile-bio-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    padding: 12px;
+
+    background: var(--white-background);
+
+    box-shadow: var(--box-shadow-light);
+
+    border-radius: var(--border-radius-medium);
+
+    text-align: left;
+
+    align-items: flex-start;
+
+    width: auto;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+.intro .name {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+
+    line-height: 1.2;
+
+    text-align: left;
+
+}
+
+ 
+
+.intro .bio {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    margin: 0;
+
+    text-align: left;
+
+    word-break: break-word;
+
+}
+
+ 
+
+/* Skills & Proficiency Section */
+
+.skills-proficiency-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  
+
+}
+
+ 
+
+.skills-proficiency-section .card {
+
+    padding: 15px;
+
+    gap: 1rem;
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-medium);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+ 
+
+.proficiency-card h2,
+
+.skills-card h2,
+
+.proficiency-card h3,
+
+.skills-card h3 {
+
+    font-size: 1.1em;
+
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+
+}
+
+ 
+
+.proficiency-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr; /* one column stack */
+
+    gap: 24px;
+
+}
+
+ 
+
+.proficiency-item {
+
+    display: flex;
+
+  align-items: center;
+
+}
+
+ 
+
+.progress-bar {
+
+    height: 26.62px;
+
+    width: 100%;
+
+    border-radius: var(--border-radius-small);
+
+    border-radius: 7.26px;
+
+    margin-left: 10px;
+
+    gap: 24px;
+
+    flex-shrink: 0;
+
+ 
+
+    }
+
+ 
+
+.progress-bar.beginner {
+
+    width: 30%;
+
+    background-color: var(--green-primary);
+
+   
+
+}
+
+ 
+
+.progress-bar.intermediate {
+
+    width: 60%;
+
+    background-color: var(--green-primary);
+
+}
+
+ 
+
+.progress-bar.advanced {
+
+    width: 90%;
+
+    background-color: var(--green-primary);
+
+}
+
+ 
+
+.skills-card h2 {
+
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+
+}
+
+ 
+
+.tag-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+.tag {
 
     background-color: var(--green-light);
 
-}
+    padding: 0.3rem 0.5rem;
 
- 
-
-.project-grid .project-card:nth-last-child(-n+3) h3, .project-grid .project-card:first-child,
-
-.project-grid .project-card:nth-last-child(-n+3) .brief,
-
-.project-grid .project-card:nth-last-child(-n+3) .technologies,
-
-.project-grid .project-card:nth-last-child(-n+3) .responsibilities {
+    border-radius: 1rem;
 
     color: var(--text-color-primary);
 
-    font-family: Poppins;
+    text-align: center;
 
-   font-weight: 400;
+    white-space: nowrap;
 
-   font-size: 19.36px;
+    font-size: 0.8em;
 
-  line-height: 150%;
+    line-height: 1.5;
 
-  letter-spacing: 0%;
-
-  vertical-align: middle;
-
- 
+    text-transform: capitalize;
 
 }
 
  
 
-/* Style the favorite heart on the first two cards to be burnt orange */
+/* Projects Section */
 
-.project-grid .project-card:nth-child(-n+2) .favorite-icon {
+.projects-section {
 
-    color: var(--burnt-orange);
+    padding: 15px;
 
-}
+    background-color: var(--white-background);
 
- 
+    border-radius: var(--border-radius-medium);
 
-/* Style the favorite heart on the last two cards to be washed-out orange (unfavorite) */
-
-.project-grid .project-card:nth-last-child(-n+2) .favorite-icon {
-
-    color: #DB8566;
+    box-shadow: var(--box-shadow-light);
 
 }
 
  
 
-.project-grid .project-card:first-child {
+.projects-section h2 {
 
-    background-color: var(--green-primary);
+    font-size: 1.3em;
 
-    color: var(--white-background);
+    margin-bottom: 12px;
 
-   
-
-}
-
- 
-
-.project-grid .project-card:first-child .favorite-icon {
-
-    color: var(--burnt-orange);
-
-    
-
-    
+    text-align: left;
 
 }
 
  
 
-.project-grid .project-card:first-child h3, .project-card h3,  
+.project-grid {
 
-.project-grid .project-card:first-child .brief,
+    display: grid;
 
-.project-grid .project-card:first-child .technologies,
+    grid-template-columns: 1fr 1fr;
 
-.project-grid .project-card:first-child .responsibilities {
+    gap: 15px;
 
-    color: var(--white-background);
+}
+
+ 
+
+.project-card {
+
+    position: relative;
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 12px;
+
+    display: block;
+
+    box-sizing: border-box;
 
 }
 
@@ -918,9 +458,45 @@ h2 {
 
     align-items: center;
 
+    margin-top: 20px;
+
     margin-bottom: 12px;
 
-   
+}
+
+ 
+
+.project-header-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: calc(100% - 24px);
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+.project-year {
+
+    font-size: 0.8em;
+
+    font-style: italic;
+
+    color: var(--text-color-secondary);
+
+    text-align: left;
 
 }
 
@@ -928,47 +504,13 @@ h2 {
 
 .project-card h3 {
 
-    font-size: 19.36px;
+    font-size: 1em;
 
-    font-weight: bold;
-
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
     text-align: left;
 
-    color: var(--text-color-primary);
-
   
-
- 
-
-}
-
- 
-
-.project-card.highlighted-card h3 {
-
-    color: var(--white-background);
-
-}
-
- 
-
-.project-grid .project-card:first-child .project-year {
-
-    color: var(--white-background); /* Ensures the year is displayed in white */
-
-    font-family: Poppins;
-
-    font-weight: 400;
-
-    font-size: 19.36px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    vertical-align: middle;
 
 }
 
@@ -980,57 +522,11 @@ h2 {
 
 .project-card .responsibilities {
 
-    color: var(--text-color-secondary);
+    font-size: 0.8em;
 
-    line-height: 1.4;
-
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 
     text-align: left;
-
-    font-family: Poppins;
-
-font-weight: 400;
-
-font-size: 19.36px;
-
-line-height: 150%;
-
-letter-spacing: 0%;
-
-vertical-align: middle;
-
- 
-
-}
-
- 
-
-.project-card.highlighted-card .brief,
-
-.project-card.highlighted-card .technologies,
-
-.project-card.highlighted-card .responsibilities {
-
-    color: var(--white-background);
-
-}
-
- 
-
-.project-card .technologies strong {
-
-    font-weight: bold;
-
-    color: var(--text-color-primary);
-
-}
-
- 
-
-.project-card.highlighted-card .technologies strong {
-
-    color: var(--white-background);
 
 }
 
@@ -1038,27 +534,55 @@ vertical-align: middle;
 
 .favorite-icon {
 
-    font-size: 14px;
+    font-size: 12px;
 
-    color: #CCCCCC; /* Default unfavorited color (fallback) */
+    color: #CCCCCC;
 
     cursor: pointer;
 
-    padding: 6px;
+    padding: 4px;
 
 }
 
  
 
-.favorite-icon.active {
+.project-grid .project-card:first-child {
 
-    color: var(--red-primary); /* Active heart color */
+    background-color: var(--green-primary);
+
+    color: var(--white-background);
 
 }
 
  
 
-.favorite-icon.orange-heart {
+.project-grid .project-card:first-child h3,
+
+.project-grid .project-card:first-child .brief,
+
+.project-grid .project-card:first-child .technologies,
+
+.project-grid .project-card:first-child .responsibilities,
+
+.project-grid .project-card:first-child .project-year {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.project-grid .project-card:nth-last-child(-n+3) {
+
+    background-color: var(--green-light);
+
+    color: var(--text-color-primary);
+
+}
+
+ 
+
+.project-grid .project-card:nth-child(-n+2) .favorite-icon {
 
     color: var(--burnt-orange);
 
@@ -1066,35 +590,2473 @@ vertical-align: middle;
 
  
 
-/* Education and Tools Section */
+.project-grid .project-card:nth-last-child(-n+2) .favorite-icon {
 
-.education-tools-section {
-
-    grid-area: education-tools;
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr; /* Set the ratio between Education and Tools */
-
-    gap: 20px; /* Ensure consistent spacing between Education and Tools */
-
-    align-items: end; /* Align both sections horizontally at the bottom */
-
-    width: 100%; /* Ensure full width */
-
-    max-width: 1440px; /* Match the container's max-width */
-
-    margin: 0 auto; /* Center the section within the parent container */
-
-    box-sizing: border-box; /* Include padding and borders in dimensions */
+    color: #DB8566;
 
 }
 
  
 
-@media (min-width: 640px) {
+.education-tools-section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    box-shadow: none;
+
+}
+
+ 
+
+/* Education Section */
+
+/* Default is Single Column for mobile/tablet (overridden in desktop layout) */
+
+.education-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+}
+
+ 
+
+.education-section h2 {
+
+    grid-column: span 1;
+
+    text-align: left;
+
+    font-size: 1.3em;
+
+    margin-bottom: 12px;
+
+ 
+
+}
+
+ 
+
+.education-grid {
+
+    display: contents;
+
+}
+
+ 
+
+/* Education Card - Default stacking layout within each card for mobile/tablet (overridden in desktop) */
+
+.education-card {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 15px;
+
+    width: 100%;
+
+    height: auto;
+
+    text-align: left;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    align-items: flex-start;
+
+    position: relative;
+
+}
+
+ 
+
+.education-card:first-child {
+
+    background-color: var(--green-primary);
+
+    color: var(--white-background);
+
+    border-left: 4px solid var(--green-primary);
+
+    padding-top: 30px;
+
+    padding-right: 30px;
+
+}
+
+ 
+
+.education-card:first-child h3,
+
+.education-card:first-child .degree-dates,
+
+.education-card:first-child .school-name,
+
+.education-card:first-child li {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.education-card:nth-last-child(-n+2) {
+
+    background-color: var(--green-light);
+
+}
+
+ 
+
+.education-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+
+}
+
+ 
+
+.education-card .degree-dates {
+
+    font-size: 0.8em;
+
+    color: var(--text-color-secondary);
+
+    margin-bottom: 2px;
+
+}
+
+ 
+
+.education-card:first-child .degree-dates {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.education-card .school-name {
+
+    font-size: 0.9em;
+
+    color: var(--text-color-secondary);
+
+    font-weight: normal;
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.education-card:first-child .school-name {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.education-header h3 {
+
+    font-size: 1em;
+
+    color: var(--text-color-primary);
+
+    font-weight: 600;
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.education-card:first-child .education-header h3 {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.education-card ul {
+
+    padding-left: 15px;
+
+    margin-bottom: 0;
+
+    margin-top: 0;
+
+    flex-grow: 0;
+
+    min-width: auto;
+
+}
+
+ 
+
+.education-card li {
+
+    font-size: 0.8em;
+
+    line-height: 1.4;
+
+    color: var(--text-color-secondary);
+
+    margin-bottom: 4px;
+
+ 
+
+}
+
+ 
+
+.education-card:first-child li {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+/* Tools Section */
+
+/* Default layout for mobile/tablet (overridden in desktop) */
+
+.tools-section {
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 15px;
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.tools-section h2 {
+
+    text-align: left;
+
+    font-size: 1.3em;
+
+    margin-bottom: 12px;
+
+}
+
+ 
+
+.tools-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    width: 100%;
+
+}
+
+ 
+
+.tool-category {
+
+    background-color: var(--green-light);
+
+    padding: 12px;
+
+    border-radius: var(--border-radius-small);
+
+    box-shadow: var(--box-shadow-light);
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+ 
+
+.tool-category h3 {
+
+    font-size: 0.9em;
+
+    margin-bottom: 6px;
+
+    background-color: #000;
+
+    color: #fff;
+
+    padding: 4px 8px;
+
+    border-radius: var(--border-radius-small);
+
+    display: inline-block;
+
+    align-self: center;
+
+   
+
+}
+
+ 
+
+.tool-icons {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    font-size: 1.1em;
+
+    color: var(--text-color-secondary);
+
+    align-items: center;
+
+    padding-bottom: 0;
+
+    justify-content: center;
+
+}
+
+ 
+
+.tool-icons i:hover {
+
+    color: var(--green-primary);
+
+}
+
+ 
+
+.html5-img,
+
+.css-img,
+
+.javascript-img,
+
+.tailwind-img,
+
+.figma-img,
+
+.microsoft-img,
+
+.google-img,
+
+.git-img,
+
+.github-img,
+
+.visualstudio-img {
+
+    width: 41.1px;
+
+    height: 41.1px;
+
+    object-fit: contain;
+
+    background: transparent; /* Ensure transparency */
+
+}
+
+ 
+
+/* Experience Section */
+
+/* Default Single Column for mobile/tablet */
+
+.experience-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    background-color: var(--white-background);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+}
+
+ 
+
+.experience-section h2 {
+
+    grid-column: span 1;
+
+    font-size: 1.3em;
+
+    margin-bottom: 12px;
+
+    text-align: left;
+
+}
+
+ 
+
+/* Job Card - Default stacking layout within each card for mobile/tablet (overridden in desktop) */
+
+.job {
+
+    background-color: var(--green-light);
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    padding: 15px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    align-items: flex-start;
+
+}
+
+ 
+
+.job.first-job {
+
+    background-color: var(--green-primary);
+
+    color: var(--white-background);
+
+    border-left: 5px solid var(--green-primary);
+
+}
+
+ 
+
+.job.first-job .job-details h3,
+
+.job.first-job .company-date,
+
+.job.first-job .job-description li {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.most-recent-badge {
+
+    background-color: var(--burnt-orange);
+
+    color: var(--white-background);
+
+    padding: 3px 6px;
+
+    border-radius: var(--border-radius-small);
+
+    position: absolute;
+
+    top: 8px;
+
+    right: 8px;
+
+    font-size: 0.7em;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    text-transform: capitalize;
+
+}
+
+ 
+
+.job-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    max-width: 100%;
+
+  
+
+}
+
+ 
+
+.job-details h3 {
+
+    font-weight: bold;
+
+    color: var(--text-color-primary);
+
+    margin-bottom: 2px;
+
+    text-align: left;
+
+    font-size: 1em;
+
+}
+
+ 
+
+.company-date {
+
+    font-size: 0.8em;
+
+    color: var(--text-color-secondary);
+
+    text-align: left;
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.job.first-job .company-date {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.job-description {
+
+    padding-left: 12px;
+
+    margin-bottom: 0;
+
+    margin-top: 0;
+
+    flex-grow: 0;
+
+    min-width: auto;
+
+ 
+
+}
+
+ 
+
+.job-description li {
+
+    font-size: 0.8em;
+
+    line-height: 1.4;
+
+    margin-bottom: 3px;
+
+    color: var(--text-color-secondary);
+
+}
+
+ 
+
+.job.first-job .job-description li {
+
+    color: var(--white-background);
+
+}
+
+ 
+
+/* Contact Section */
+
+/* Default layout for mobile/tablet */
+
+.contact-section {
+
+    background-color: var(--burnt-orange);
+
+    color: var(--white-background);
+
+    padding: 20px;
+
+    border-radius: var(--border-radius-medium);
+
+    box-shadow: var(--box-shadow-light);
+
+    text-align: center;
+
+}
+
+ 
+
+.contact-section p {
+
+    margin-bottom: 12px;
+
+    color: var(--white-background);
+
+}
+
+ 
+
+.contact-section a {
+
+    color: var(--white-background);
+
+    text-decoration: underline;
+
+    font-weight: bold;
+
+    color: #DDDDDD;
+
+}
+
+ 
+
+/* --- Mobile Layouts (up to 767px) --- */
+
+/* Styles for screens up to 767px wide */
+
+@media (max-width: 767px) {
+
+ 
+
+    .desktop-only {
+
+        display: none;
+
+      }
+
+ 
+
+    .profile-img {
+
+        width: 147px;
+
+        height: 137px;
+
+        border-radius: 12px;
+
+    }
+
+ 
+
+    /* Job Description - Override padding for mobile/tablet */
+
+    .job-description {
+
+        padding-left: 15px;
+
+      
+
+    }
+
+ 
+
+    .proficiency-card h2 {
+
+        margin-bottom: 10px;
+
+     
+
+    }
+
+ 
+
+    .proficiency-labels-container {
+
+        margin-bottom: 10px;
+
+      
+
+    }
+
+ 
+
+    /* --- Education Section Mobile Layout (767px and below) --- */
+
+    .education-section h2 {
+
+        font-size: 1.3em;
+
+        font-weight: 600;
+
+        font-family: var(--font-family);
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-bottom: 8px;
+
+    }
+
+ 
+
+    .education-card {
+
+        display: flex;
+
+        flex-direction: row;
+
+        gap: 10px;
+
+        align-items: flex-start;
+
+        padding: 10px;
+
+ 
+
+    }
+
+ 
+
+    .education-card:first-child {
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-card .education-left {
+
+        flex-basis: 100px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+     
+
+    }
+
+ 
+
+   
+
+    .education-card .degree-dates {
+
+        font-size: 0.8em;
+
+        font-weight: 400;
+
+        font-family: Poppins;
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin: 0;
+
+        color: var(--text-color-secondary);
+
+      
+
+    }
+
+ 
+
+   
+
+    .education-card .school-name {
+
+        font-size: 1em;
+
+        font-weight: 600;
+
+        font-family: Poppins;
+
+        line-height: 1.2;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin: 0;
+
+        color: var(--text-color-primary);
+
+      
+
+    }
+
+ 
+
+    .education-card .education-header h3 {
+
+        font-size: 0.8em;
+
+        font-weight: 400;
+
+        font-family: Poppins;
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin: 0;
+
+        color: var(--text-color-secondary);
+
+    }
+
+ 
+
+  
+
+    .education-card:first-child .degree-dates,
+
+    .education-card:first-child .school-name,
+
+    .education-card:first-child .education-header h3 {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-card ul {
+
+        flex-grow: 1;
+
+        padding-left: 15px;
+
+        margin: 0;
+
+        color: var(--text-color-secondary);
+
+    }
+
+ 
+
+    .education-card:first-child ul {
+
+        color: var(--white-background);
+
+       
+
+    }
+
+ 
+
+    .education-card li {
+
+        font-size: 0.8em;
+
+        font-weight: 400;
+
+        font-family: Poppins;
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin-bottom: 4px;
+
+        color: inherit;
+
+    }
+
+ 
+
+    .education-card:first-child li {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .most-recent-badge {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 8px;
+
+        line-height: 155%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    /* --- Experience Section Mobile Layout (767px and below) --- */
+
+ 
+
+    .experience-section {
+
+        gap: 15px;
+
+      
+
+    }
+
+ 
+
+    .experience-section h2 {
+
+        font-size: 1.3em;
+
+        font-weight: 600;
+
+        font-family: var(--font-family);
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-bottom: 8px;
+
+    }
+
+ 
+
+    .job {
+
+        display: flex;
+
+        flex-direction: row;
+
+        gap: 10px;
+
+        align-items: flex-start;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+      
+
+    }
+
+ 
+
+    .job.first-job {
+
+        padding-top: 30px;
+
+        padding-right: 30px;
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 5px solid var(--green-primary);
+
+     
+
+    }
+
+ 
+
+    .job .job-left {
+
+        flex-basis: 100px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job .job-right {
+
+        flex-grow: 1;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job .company-date {
+
+        font-size: 0.8em;
+
+        font-weight: 400;
+
+        font-family: Poppins;
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin: 0;
+
+        color: var(--text-color-secondary);
+
+    }
+
+ 
+
+    .job .job-details h3 {
+
+        font-size: 1em;
+
+        font-weight: 600;
+
+        font-family: Poppins;
+
+        line-height: 1.2;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin: 0;
+
+        color: var(--text-color-primary);
+
+    }
+
+ 
+
+    .job.first-job .company-date,
+
+    .job.first-job .job-details h3 {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .job-description {
+
+        flex-grow: 1;
+
+        padding-left: 15px;
+
+        margin: 0;
+
+        color: var(--text-color-secondary);
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job.first-job .job-description {
+
+        color: var(--white-background);
+
+      
+
+    }
+
+ 
+
+    .job-description li {
+
+        font-size: 0.8em;
+
+        font-weight: 400;
+
+        font-family: Poppins;
+
+        line-height: 1.5;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin-bottom: 4px;
+
+        color: inherit;
+
+    }
+
+ 
+
+    .job.first-job .job-description li {
+
+        color: var(--white-background);
+
+    }
+
+}
+
+ 
+
+/* --- Mobile Layouts (Tablet 481px - 767px) --- */
+
+/* Styles specifically for tablet devices (481px to 767px) */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .tools-grid {
+
+        gap: 12px;
+
+ 
+
+    }
+
+ 
+
+    .tool-category {
+
+        padding: 10px;
+
+    }
+
+ 
+
+    .education-card {
+
+        gap: 10px;
+
+    }
+
+ 
+
+    .education-card:first-child {
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .job {
+
+        gap: 10px;
+
+        flex-direction: row;
+
+    }
+
+ 
+
+    .job.first-job {
+
+        padding-top: 30px;
+
+        padding-right: 30px;
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 5px solid var(--green-primary);
+
+    }
+
+ 
+
+    .profile-section {
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 10px;
+
+        position: static;
+
+        height: auto;
+
+    }
+
+ 
+
+    .profile-img,
+
+    .profile-bio-container {
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+        width: auto;
+
+        height: auto;
+
+      
+
+    }
+
+ 
+
+    .profile-img {
+
+        width: 147px;
+
+        height: 137px;
+
+        flex-shrink: 0;
+
+ 
+
+    }
+
+ 
+
+    .profile-bio-container {
+
+        flex-grow: 1;
+
+        width: auto;
+
+      
+
+    }
+
+ 
+
+    .most-recent-badge {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 8px;
+
+        line-height: 155%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+}
+
+ 
+
+/* --- Mobile Layouts (Small Screens up to 480px) --- */
+
+/* Styles specifically for very small screens (up to 480px) */
+
+@media (max-width: 480px) {
+
+ 
+
+    /* Added to hide horizontal overflow globally */
+
+    body,
+
+    html {
+
+        overflow-x: hidden;
+
+    }
+
+ 
 
     .container {
+
+        padding: 10px;
+
+        gap: 10px;
+
+        overflow-x: hidden;
+
+        overflow-y: hidden;
+
+    }
+
+ 
+
+    .profile-section {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 8px;
+
+    }
+
+ 
+
+    .profile-img {
+
+        width: 147px;
+
+        height: 137px;
+
+        border-radius: 12px;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+    }
+
+ 
+
+    .profile-bio-container {
+
+        text-align: left;
+
+        align-items: flex-start;
+
+        top: 18px;
+
+        left: 197px;
+
+        justify-content: space-between;
+
+        border-radius: 12px;
+
+        padding: 12px;
+
+        position: static;
+
+        flex-grow: 1;
+
+        width: auto;
+
+        height: auto;
+
+    }
+
+ 
+
+    .intro .name {
+
+        margin-bottom: 2px;
+
+        text-align: left;
+
+        width: 139px;
+
+        height: 17px;
+
+        font-family: var(--font-family);
+
+        font-weight: 600;
+
+        font-size: 16px;
+
+        line-height: 104%;
+
+        letter-spacing: 0%;
+
+ 
+
+    }
+
+ 
+
+    .intro .bio {
+
+        width: 139px;
+
+        height: 75px;
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 10px;
+
+        line-height: 151%;
+
+        letter-spacing: 0%;
+
+        color: #5C5C5C;
+
+ 
+
+    }
+
+ 
+
+    .skills-proficiency-section {
+
+        gap: 10px;
+
+     
+
+    }
+
+ 
+
+    .skills-proficiency-section .card {
+
+        padding: 12px;
+
+        gap: 12px;
+
+        width: auto;
+
+        overflow-x: hidden;
+
+        overflow-y: hidden;
+
+    }
+
+ 
+
+ 
+
+    .proficiency-card h2,
+
+    .skills-card h2,
+
+    .projects-section h2,
+
+    .tools-section h2,
+
+    .experience-section h2 {
+
+        font-family: var(--font-family);
+
+        font-weight: 500;
+
+        font-size: 14px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+        width: auto;
+
+        height: auto;
+
+    }
+
+ 
+
+    .tools-section h2 {
+
+        text-align: center;
+
+    }
+
+ 
+
+    .education-section h2 {
+
+        font-family: var(--font-family);
+
+        font-weight: 500;
+
+        font-size: 14px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-bottom: 8px;
+
+    }
+
+ 
+
+    .proficiency-card h3,
+
+    .skills-card h3 {
+
+        font-weight: 500;
+
+        font-size: 14px;
+
+        line-height: 150%;
+
+        text-align: left;
+
+        width: auto;
+
+        height: auto;
+
+    }
+
+ 
+
+    .tool-category h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 5px;
+
+        line-height: 142%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+        text-transform: capitalize;
+
+    }
+
+ 
+
+    .proficiency-labels {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 10px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+       
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        display: flex;
+
+        gap: 5px;
+
+        justify-content: left;
+
+        width: auto;
+
+        height: auto;
+
+        flex-wrap: wrap;
+
+     
+
+    }
+
+ 
+
+    .proficiency-card {
+
+        width: auto;
+
+        top: 170px;
+
+        left: 42px;
+
+        border-radius: 12px;
+
+        padding: 12px;
+
+        gap: 12px;
+
+        overflow-x: hidden;
+
+        overflow-y: hidden;
+
+    }
+
+ 
+
+ 
+
+    .proficiency-item {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 10px;
+
+        line-height: 104%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+ 
+
+    }
+
+ 
+
+    .tag {
+
+        border-radius: 40px;
+
+        padding: 4px 6px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+        background-color: var(--green-light);
+
+        color: var(--text-color-primary);
+
+        line-height: 1.5;
+
+        text-transform: capitalize;
+
+    }
+
+ 
+
+    .progress-bar {
+
+        height: 10px;
+
+     
+
+    }
+
+ 
+
+    .tools-grid {
+
+        gap: 8px;
+
+       
+
+    }
+
+ 
+
+    .tool-category {
+
+        width: 76px;
+
+        height: 104px;
+
+        top: 41px;
+
+        left: 224px;
+
+        border-radius: 6px;
+
+        gap: 16px;
+
+        padding-top: 16px;
+
+        padding-right: 4px;
+
+        padding-bottom: 16px;
+
+        padding-left: 4px;
+
+    }
+
+ 
+
+    .tool-icons {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+        justify-items: center;
+
+ 
+
+    }
+
+   
+
+ 
+
+    /* Set tools logo dimensions on mobile */
+
+    .html5-img,
+
+    .css-img,
+
+    .javascript-img,
+
+    .tailwind-img,
+
+    .figma-img,
+
+    .microsoft-img,
+
+    .google-img,
+
+    .git-img,
+
+    .github-img,
+
+    .visualstudio-img {
+
+        width: 17px;
+
+        height: 17px;
+
+        object-fit: contain;
+
+        background: transparent;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+    }
+
+ 
+
+    /* Education Card - Override gap for small mobile */
+
+    .education-card {
+
+        gap: 8px;
+
+        /* Override tablet gap */
+
+    }
+
+ 
+
+    .education-card:first-child {
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    /* Job Card - Override gap for small mobile, ensure row layout */
+
+    .job {
+
+        gap: 8px;
+
+        flex-direction: row;
+
+     
+
+    }
+
+ 
+
+    .job.first-job {
+
+        padding-top: 30px;
+
+        padding-right: 30px;
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 5px solid var(--green-primary);
+
+    }
+
+ 
+
+    .project-year {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 12.11px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .project-grid .project-card:first-child .project-year {
+
+        color: var(--white-background);
+
+       
+
+    }
+
+ 
+
+    .project-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 9.69px;
+
+     
+
+    }
+
+ 
+
+    .project-card {
+
+        width: 139.2px;
+
+        height: 290.6px;
+
+        border-radius: 12.11px;
+
+        padding: 9.69px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+ 
+
+    }
+
+ 
+
+    .project-card .brief,
+
+    .project-card .technologies,
+
+    .project-card .responsibilities {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 9.69px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-bottom: 4px;
+
+    }
+
+ 
+
+    .project-card h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 12.11px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: left;
+
+    }
+
+ 
+
+    .project-card .brief,
+
+    .project-card .technologies,
+
+    .project-card .responsibilities {
+
+        margin-bottom: 4px;
+
+      
+
+    }
+
+ 
+
+    /* --- Education Section Small Mobile Layout (up to 480px) --- */
+
+ 
+
+    .education-card .degree-dates {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 8px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+    .education-card .school-name {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 10px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+
+    .education-card .education-header h3 {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 8px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+   
+
+    .education-card:first-child .degree-dates,
+
+    .education-card:first-child .school-name,
+
+    .education-card:first-child .education-header h3 {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-card li {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 9.69px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin-bottom: 4px;
+
+        color: inherit;
+
+    }
+
+ 
+
+    .education-card:first-child li {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+  
+
+    .most-recent-badge {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 8px;
+
+        line-height: 155%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    /* --- Experience Section Small Mobile Layout (up to 480px) --- */
+
+ 
+
+    .experience-section {
+
+        gap: 10px;
+
+      
+
+    }
+
+ 
+
+    .experience-section h2 {
+
+        font-family: var(--font-family);
+
+        font-weight: 500;
+
+        font-size: 14px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        text-align: left;
+
+        margin-bottom: 8px;
+
+    }
+
+ 
+
+    .job {
+
+        gap: 8px;
+
+        flex-direction: row;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job.first-job {
+
+        padding-top: 30px;
+
+        padding-right: 30px;
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 5px solid var(--green-primary);
+
+    }
+
+ 
+
+    .job .job-left {
+
+        flex-basis: 100px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job .job-right {
+
+        flex-grow: 1;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        box-sizing: border-box;
+
+    }
+
+ 
+
+    .job .company-date {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 8px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+        .job-company{
+
+            font-family: Poppins;
+
+            font-weight: 400;
+
+            font-size: 8px;
+
+            line-height: 150%;
+
+            letter-spacing: 0%;
+
+            text-align: left;
+
+            vertical-align: middle;
+
+        }
+
+ 
+
+    .job .job-details h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 10px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+    .job.first-job .company-date,
+
+    .job.first-job .job-details h3 {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .job-description li {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 9.69px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        margin-bottom: 4px;
+
+        color: inherit;
+
+    }
+
+ 
+
+    .job.first-job .job-description li {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+}
+
+ 
+
+.project-card .responsibilities strong {
+
+    display: block;
+
+   
+
+}
+
+ 
+
+.contact-section {
+
+    width: auto;
+
+    height: 89px;
+
+    top: 2361px;
+
+    left: 42px;
+
+    border-radius: 12px;
+
+    justify-content: space-between;
+
+    padding: 12px;
+
+ 
+
+}
+
+.contact-note {
+
+    font-family: Poppins;
+
+    font-weight: 500;
+
+    font-size: 14px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    text-align: left;
+
+    vertical-align: middle;
+
+ 
+
+}
+
+ 
+
+footer .contact-details {
+
+    font-family: Poppins, sans-serif;
+
+    font-weight: 400;
+
+    font-size: 10px;
+
+    line-height: 150%;
+
+    letter-spacing: 0%;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+
+    text-align: left;
+
+ 
+
+}
+
+ 
+
+.contact-details a {
+
+    text-decoration: none;
+
+    margin: 0 5px;
+
+}
+
+ 
+
+.contact-details a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+/* --- Desktop Layouts (768px and up) --- */
+
+ 
+
+@media (min-width: 768px) {
+
+ 
+
+    body {
+
+        padding: 20px;
+
+     
+
+    }
+
+ 
+
+    .container {
+
+        padding: 24px;
+
+        max-width: 1342px;
+
+        display: grid;
 
         grid-template-columns: 1fr 1fr;
 
@@ -1112,859 +3074,1742 @@ vertical-align: middle;
 
             "contact contact";
 
+        gap: 20px;
+
     }
+
+ 
+
+    .profile-section {
+
+        grid-area: profile;
+
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+
+        align-items: center;
+
+        gap: 20px;
+
+        position: static;
+
+        height: auto;
+
+    }
+
+ 
+
+    /* Profile Image Styles for Desktop */
+
+    .profile-img {
+
+        width: 300.1px;
+
+        height: 300.1px;
+
+        border-radius: 29.04px;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+    }
+
+ 
+
+    /* Profile Bio Container Styles for Desktop */
+
+    .profile-bio-container {
+
+        width: auto;
+
+        height: 300.1px;
+
+        top: auto;
+
+        left: auto;
+
+        position: static;
+
+        border-radius: 29.04px;
+
+        gap: 10px;
+
+        padding-top: 59px;
+
+        padding-right: 69px;
+
+        padding-bottom: 59px;
+
+        padding-left: 69px;
+
+    }
+
+ 
+
+    .intro .name {
+
+        font-family: Poppins;
+
+        font-weight: 600;
+
+        font-size: 36px;
+
+        line-height: 104%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .intro .bio {
+
+        width: auto;
+
+        height: auto;
+
+        top: auto;
+
+        left: auto;
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 22px;
+
+        color: #5C5C5C;
+
+        line-height: 151%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .skills-proficiency-section {
+
+        grid-area: skills;
+
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+
+        gap: 24px;
+
+    }
+
+ 
+
+    .skills-proficiency-section .card {
+
+        padding: 20px;
+
+    }
+
+ 
+
+    .proficiency-card {
+
+        width: 563.8px;
+
+        height: 428.3px;
+
+        border-radius: 29.04px;
+
+        padding-top: 41px;
+
+        padding-right: 28px;
+
+        padding-bottom: 41px;
+
+        padding-left: 28px;
+
+        box-sizing: border-box;
+
+        background-color: var(--card-background-color, #fff);
+
+        box-shadow: var(--box-shadow-light);
+
+        overflow: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+ 
+
+    .proficiency-card h2,
+
+    .skills-card h2,
+
+    .proficiency-card h3,
+
+    .skills-card h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .proficiency-labels-container {
+
+        width: auto;
+
+        height: auto;
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        flex-shrink: 0;
+
+    }
+
+ 
+
+    .proficiency-labels-container .proficiency-labels {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+    }
+
+ 
+
+    .proficiency-list {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 24px;
+
+        width: 100%;
+
+        flex-grow: 1;
+
+    }
+
+ 
+
+    .proficiency-item {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        width: 100%;
+
+     
+
+    }
+
+ 
+
+    .proficiency-item span {
+
+        flex-shrink: 0;
+
+        margin: 0;
+
+        padding: 0;
+
+        /* Explicitly apply original typography */
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 24.2px;
+
+        line-height: 104%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+    /* Style the progress bar div */
+
+    .proficiency-item .progress-bar {
+
+        height: 26px;
+
+        border-radius: 7.26px;
+
+        flex-grow: 1;
+
+        max-width: 100%;
+
+        position: static;
+
+    }
+
+ 
+
+    .tag {
+
+        width: auto;
+
+        height: auto;
+
+        border-radius: 96.81px;
+
+        padding-top: 9.68px;
+
+        padding-right: 24.2px;
+
+        padding-bottom: 9.68px;
+
+        padding-left: 24.2px;
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+        text-transform: capitalize;
+
+    }
+
+ 
+
+    .projects-section {
+
+        grid-area: projects;
+
+        padding: 20px;
+
+    }
+
+ 
+
+    .projects-section h2 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .project-grid {
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+
+    }
+
+ 
+
+    .project-card {
+
+        padding: 16px;
+
+    }
+
+ 
+
+    .project-header-top {
+
+        top: 16px;
+
+        right: 16px;
+
+        width: calc(100% - 32px);
+
+    }
+
+ 
+
+    .project-year {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .project-card h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .project-card .brief,
+
+    .project-card .technologies,
+
+    .project-card .responsibilities {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 19.36px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+    }
+
+ 
+
+    .favorite-icon {
+
+        font-size: 14px;
+
+        padding: 6px;
+
+    }
+
+ 
 
     .education-tools-section {
 
-        grid-template-columns: 2fr 1fr; /* Adjust the ratio as needed */
+        grid-area: education-tools;
 
-        align-items: start; /* Align items to the top */
+        display: grid;
+
+        grid-template-columns: 2fr 1fr;
+
+        gap: 20px;
+
+        height: auto;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+ 
 
     }
 
-}
+ 
+
+    .education-section {
+
+        width: auto;
+
+        height: auto;
+
+        top: auto;
+
+        left: auto;
+
+        position: static;
+
+        border-radius: 29.04px;
+
+        gap: 10px;
+
+        padding: 29px;
+
+        background-color: var(--white-background, #fff);
+
+        box-shadow: var(--box-shadow-light);
+
+        display: flex;
+
+        flex-direction: column;
 
  
 
-/* Education Section */
-
-.education-section {
-
-    background-color: var(--white-background);
-
-    border-radius: var(--border-radius-medium);
-
-    padding: 20px; /* Add spacing inside the section */
-
-    box-shadow: var(--box-shadow-light);
-
-    display: flex; /* Use flexbox for layout */
-
-    flex-direction: column; /* Stack items vertically */
-
-    gap: 20px; /* Add spacing between items */
-
-    width: 100%; /* Full width of its parent column */
-
-    box-sizing: border-box; /* Include padding and border in dimensions */
-
-}
+    }
 
  
 
-.education-section h2 {
+    .education-section h2 {
+
+        margin-bottom: 16px;
+
+        font-size: 1.5em;
+
+    }
+
+ 
+
+    .education-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        width: auto;
+
+        height: auto;
+
+        flex-grow: 1;
+
+    }
+
+ 
+
+    .education-card {
+
+        width: auto;
+
+        height: auto;
+
+        top: auto;
+
+        left: auto;
+
+        position: relative;
+
+        border-radius: 29.04px;
+
+        padding: 27px 21px;
+
+        gap: 35px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+        background-color: var(--green-light);
+
+        box-shadow: var(--box-shadow-light);
+
+        box-sizing: border-box;
+
+        flex-grow: 1;
+
+    }
+
+ 
+
+    /* Specific style for the first education card */
+
+    .education-card.highlighted-education {
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 4px solid var(--green-primary);
+
+        padding: 27px 21px;
+
+    }
+
+ 
+
+    .education-card .most-recent-badge {
+
+        background-color: var(--burnt-orange);
+
+        color: var(--white-background);
+
+        padding: 3px 6px;
+
+        border-radius: var(--border-radius-small);
+
+        position: absolute;
+
+        top: 15px;
+
+        right: 8px;
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 14.52px;
+
+        line-height: 155%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+        text-transform: capitalize;
+
+        z-index: 1;
+
+      
+
+    }
+
+ 
+
+    .education-card .education-left {
+
+        box-sizing: border-box;
+
+        flex-shrink: 0;
+
+   
+
+    }
+
+ 
+
+    .education-card .degree-dates {
+
+        font-size: 0.9em;
+
+        color: var(--text-color-secondary);
+
+    }
+
+ 
+
+ 
+
+    .education-card.highlighted-education .degree-dates {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-card .school-name {
+
+        font-size: 1em;
+
+        font-weight: 600;
+
+        color: var(--text-color-primary);
+
+    }
+
+ 
+
+ 
+
+    .education-card.highlighted-education .school-name {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-header h3 {
+
+        font-size: 1.1em;
+
+        font-weight: 700;
+
+        color: var(--text-color-primary);
+
+    }
+
+ 
+
+    .education-card.highlighted-education .education-header h3 {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .education-card ul {
+
+        padding-left: 20px;
+
+        width: auto;
+
+        height: auto;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        flex-grow: 1;
+
+    }
+
+ 
+
+    .education-card li {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 19.36px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        word-break: break-word;
+
+    }
+
+ 
+
+    .education-card.highlighted-education li {
+
+        color: var(--white-background);
+
+    }
+
+ 
+
+    .tools-section {
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+        width: 300.1px;
+
+        height: auto;
+
+        border-radius: 29.04px;
+
+        padding: 29px;
+
+        box-shadow: var(--box-shadow-light);
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
 
   
 
-    color: var(--text-color-primary);
-
-    margin-bottom: 16px;
-
-    text-align: left;
-
-    grid-column: span 2; /* Make the heading span the full width */
-
-    font-family: Poppins;
-
-    font-weight: 500;
-
-    font-size: 33.88px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    vertical-align: middle;
-
  
 
-}
+    .education-tools-section {
 
- 
+        display: flex;
 
-/* Base styling for education cards */
+        flex-direction: row;
 
-.education-card {
+        gap: 20px;
 
-    background-color: var(--white-background);
+        width: 100%;
 
-    border-radius: var(--border-radius-medium);
+        align-items: stretch;
 
-    box-shadow: var(--box-shadow-light);
+        box-sizing: border-box;
 
-    padding: 16px;
+      }
 
-    width: 100%; /* Ensure width is responsive */
+     
 
-    height: auto;
+    
 
-    text-align: left;
+      .education-section {
 
-    margin-bottom: 16px; /* Add spacing between sections (fallback for older browsers) */
+        flex: 1;
 
-}
+        border-radius: 29.04px;
 
- 
+        padding: 29px;
 
-.education-card:first-child {
+        background-color: var(--white-background, #fff);
 
-    background-color: var(--green-primary);
+        box-shadow: var(--box-shadow-light);
 
-    color: var(--white-background); /* White text for contrast */
+        display: flex;
 
-    border-left: 4px solid var(--green-primary); /* Optional: add a left border in green */
+        flex-direction: column;
 
-    height: auto; /* Allow dynamic height based on content */
+        box-sizing: border-box;
 
-    width: 926.61px;
+      }
 
-    text-align: left;
+     
 
-    overflow: hidden; /* Ensure content does not overflow */
+    
 
-    padding: 16px; /* Add proper padding to ensure spacing */
+    .education-section h2 {
 
-    box-sizing: border-box; /* Include padding in dimensions */
+        font-family: Poppins;
 
-}
+        font-weight: 500;
 
- 
+        font-size: 33.88px;
 
-/* Ensure white text for the first card's content */
+        line-height: 150%;
 
-.education-card:first-child h3,
+        letter-spacing: 0%;
 
-.education-card:first-child .degree-dates,
+        text-align: left;
 
-.education-card:first-child li {
+        vertical-align: middle;
 
-    color: var(--white-background);
+       
 
-}
-
- 
-
-/* Highlight the last two education cards in light green */
-
-.education-card:nth-last-child(-n+2) {
-
-    background-color: var(--green-light); /* Light green background */
-
-    height: auto; /* Allow dynamic height based on content */
-
-    width: 926.61px;
-
-    text-align: left;
-
-    overflow: hidden; /* Prevent content overflow */
-
-    padding: 16px; /* Add proper padding */
-
-    box-sizing: border-box; /* Include padding in dimensions */
-
-}
-
- 
-
-/* Last Education Card */
-
-.education-card:last-child {
-
-    height: 193.61px; /* Set height for the last section */
-
-    width: 926.61px; /* Set width for the last section */
-
-    margin: 0 auto; /* Center align the card horizontally */
-
-    background-color: var(--green-light); /* Optional: Maintain the light green background */
-
-    border-radius: var(--border-radius-medium);
-
-    box-shadow: var(--box-shadow-light);
-
-    padding: 16px;
-
-    text-align: left;
-
-}
-
- 
-
-.education-header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: left;
-
-    font-family: Poppins, sans-serif;
-
-    font-weight: 500;
-
-    font-size: 33.88px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    text-align: left;
-
-    vertical-align: left;
-
-    margin-bottom: 16px;
-
-    grid-column: span 2;
-
- 
-
-}
-
- 
-
-.education-header h3 {
-
-    margin-bottom: 0;
-
-    text-align: left;
-
-    color: var(--text-color-primary);
-
-    font-family: Poppins;
-
-    font-weight: 400;
-
-    font-size: 19.36px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    vertical-align: middle;
-
- 
-
-}
-
- 
-
-.education-card:first-child .education-header h3 {
-
-    color: var(--white-background); /* White text for the first card header */
-
-}
-
- 
-
-/* Styling for degree dates */
-
-.education-card .degree-dates {
-
-    font-size: 12px;
-
-    color: var(--text-color-secondary);
-
-    margin-bottom: 8px;
-
-    text-align: left;
-
-    font-family: Poppins;
-
-   font-weight: 400;
-
-   font-size: 19.36px;
-
-   line-height: 150%;
-
-   letter-spacing: 0%;
-
-   vertical-align: middle;
-
- 
-
-}
-
- 
-
-.education-card:first-child .degree-dates {
-
-    color: var(--white-background); /* White text for the first card dates */
-
-}
-
- 
-
-/* List styling for the education card */
-
-.education-card ul {
-
-    padding-left: 16px;
-
-    margin-bottom: 0;
-
-}
-
- 
-
-.education-card li {
-
-    color: var(--text-color-secondary);
-
-    line-height: 1.4;
-
-    margin-bottom: 4px;
-
-    text-align: left;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-weight: 400;
-
-    font-size: 19.36px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    vertical-align: middle;
-
-    font-family: Poppins;
-
-    font-weight: 400;
-
-    font-size: 19.36px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-    vertical-align: middle; 
-
-}
-
-/* Tools Section */
-
-.tools-section {
-
-    background-color: var(--white-background);
-
-    border-radius: var(--border-radius-medium);
-
-    padding: 20px; /* Add spacing inside the section */
-
-    box-shadow: var(--box-shadow-light);
-
-    display: flex; /* Use flexbox for layout */
-
-    flex-direction: column; /* Stack items vertically */
-
-    align-items: center; /* Center content horizontally */
-
-    justify-content: flex-end; /* Align content to the bottom */
-
-    gap: 20px; /* Add spacing between items */
-
-    width: 100%; /* Full width of its parent column */
-
-    box-sizing: border-box; /* Include padding and border in dimensions */
-
-    height: 100%; /* Match the height of Education Section */
-
-    font-family: Poppins;
-
-    font-weight: 500;
-
-    font-size: 19.36px;
-
- 
+    }
 
    
 
-}
+    .education-grid {
 
- 
+        display: flex;
 
-/* Tool Category */
+        flex-direction: column;
 
-.tool-category {
+        gap: 15px;
 
-    background-color: var(--green-light);
+        width: auto;
 
-    padding: 12px; /* Adjust padding within categories */
+        height: auto;
 
-    border-radius: var(--border-radius-small);
+        flex-grow: 1;
 
-    box-shadow: var(--box-shadow-light); /* Optional for a slight shadow effect */
-
-    height: auto; /* Reset height to ensure proper spacing */
+    }
 
    
 
-}
+    .education-card {
 
- 
+        position: relative;
 
-/* First Category */
+        padding: 60px 21px 27px;
 
-.tool-category:first-child {
+        border-radius: 29.04px;
 
-    height: 274px; /* Set height for the first category */
+        display: flex;
 
-    width: 184px;
+        flex-direction: row;
 
-    margin-bottom: 20px; /* Add space after the first category */
+        align-items: flex-start;
 
-}
+        background-color: var(--green-light);
 
- 
+        box-shadow: var(--box-shadow-light);
 
-/* Second Category */
+        box-sizing: border-box;
 
-.tool-category:nth-child(2) {
+      }
 
-    height: 152px; /* Set height for the second category */
+     
 
-    width: 184px;
+    
 
-    margin-bottom: 20px; /* Add space after the second category */
+    .education-card.highlighted-education {
 
-}
+        background-color: var(--green-primary);
 
- 
+        color: var(--white-background);
 
-/* Third Category */
+        border-left: 4px solid var(--green-primary);
 
-.tool-category:nth-child(3) {
+        padding: 30px 24px;
 
-    height: 198px; /* Set height for the third category */
-
-    width: 184px;
-
-    gap: 39px; /* Adjust gap for the third category */
-
-  
-
-}
-
- 
-
-/* Tool Category Title */
-
-.tool-category h3 {
-
-    font-size: 1em;
-
-   
-
-    color: var(--text-color-primary);
-
-    margin-top: 0;
-
-    margin-bottom: 8px; /* Adjust margin for better spacing */
-
-    text-align: left;
+    }
 
    
 
     
 
-}
+    .education-card .education-left {
 
- 
+        box-sizing: border-box;
 
-/* Tool Icons */
+        flex-shrink: 0;
 
-.tool-icons {
-
-    display: flex;
-
-    gap: 8px; /* Adjust gap between icons */
-
-    font-size: 1.1em;
-
-    color: var(--text-color-secondary);
-
-    align-items: center;
-
-    padding-bottom: 4px; /* Reduce padding below the icons */
-
-}
-
-    .tool-icons i {
-
-    width: 24px; /* Increase the width of the icons */
-
-    height: 24px; /* Increase the height of the icons */
-
-    font-size: 24px; /* Adjust font size to match the new dimensions */
-
-    display: inline-flex; /* Ensure proper alignment */
-
-    align-items: center; /* Center align vertically */
-
-    justify-content: center; /* Center align horizontally */
-
-}
-
- 
-
-.tool-icons i:hover {
-
-    color: var(--green-primary);
+    }
 
    
 
-}
+    .education-card .degree-dates {
+
+        font-size: 0.9em;
+
+        color: var(--text-color-secondary);
+
+    }
+
+   
+
+    .education-card.highlighted-education .degree-dates {
+
+        color: var(--white-background);
+
+    }
+
+   
+
+    .education-card .school-name {
+
+        font-size: 1em;
+
+        font-weight: 600;
+
+        color: var(--text-color-primary);
+
+    }
+
+   
+
+    .education-card.highlighted-education .school-name {
+
+        color: var(--white-background);
+
+    }
+
+   
+
+    .education-header h3 {
+
+        font-size: 1.1em;
+
+        font-weight: 700;
+
+        color: var(--text-color-primary);
+
+    }
+
+   
+
+    .education-card.highlighted-education .education-header h3 {
+
+        color: var(--white-background);
+
+    }
+
+   
+
+    .education-card ul {
+
+        padding-left: 20px;
+
+        width: auto;
+
+        height: auto;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        flex-grow: 1;
+
+    }
+
+   
+
+    .education-card li {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 19.36px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        word-break: break-word;
+
+    }
+
+   
+
+    .education-card.highlighted-education li {
+
+        color: var(--white-background);
+
+    }
+
+   
+
+    .tools-section {
+
+        width: 300.1px;
+
+        border-radius: 29.04px;
+
+        padding: 29px;
+
+        background-color: var(--white-background, #fff);
+
+        box-shadow: var(--box-shadow-light);
+
+        display: flex;
+
+        flex-direction: column;
+
+        box-sizing: border-box;
+
+      }
+
+     
+
+    
+
+      .tools-section h2 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+       
+
+      }
+
+     
+
+    
+
+    .tools-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: center; /* Center each tool category horizontally */
+
+        width: 100%;
+
+        height: auto;
+
+      }
+
+   
+
+      .tool-category {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+      }
+
+   
+
+    .tool-category:nth-child(1) {
+
+        width: 183.9px;
+
+        height: 273.8px;
+
+        border-radius: 14.52px;
+
+        padding-top: 38.72px;
+
+        padding-right: 9.68px;
+
+        padding-bottom: 38.72px;
+
+        padding-left: 9.68px;
+
+        gap: 38.72px;
+
+    }
+
+   
+
+    .tool-category:nth-child(2) {
+
+        width: 184px;
+
+        height: 152px;
+
+        border-radius: 14.52px;
+
+    }
+
+   
+
+    .tool-category:nth-child(3) {
+
+        width: 183.9px;
+
+        height: 198.4px;
+
+        border-radius: 14.52px;
+
+        padding-top: 38.72px;
+
+        padding-right: 9.68px;
+
+        padding-bottom: 38.72px;
+
+        padding-left: 9.68px;
+
+        gap: 38.72px;
+
+    }
+
+   
+
+    .tool-category h3 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 14.52px;
+
+        line-height: 155%;
+
+        letter-spacing: 0%;
+
+        text-align: center;
+
+        vertical-align: middle;
+
+        text-transform: capitalize;
+
+        margin-bottom: 10px;
+
+        background-color: #000;
+
+        color: #fff;
+
+        padding: 4px 8px;
+
+        border-radius: var(--border-radius-small);
+
+        display: inline-block;
+
+        align-self: center;
+
+    }
+
+   
+
+    .tool-icons {
+
+        gap: 10px;
+
+        font-size: 1.1em;
+
+        color: var(--text-color-secondary);
+
+        align-items: center;
+
+        padding-bottom: 0;
+
+        justify-content: center;
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        justify-items: center;
+
+    }
+
+   
+
+    .tool-icons i {
+
+        width: 41.1px;
+
+        height: 41.1px;
+
+    }
+
+   
+
+    .tool-icons i:hover {
+
+        color: var(--green-primary);
+
+    }
 
  
 
-/* Experience Section */
+    /* Experience Section */
 
-.experience-section {
+    .experience-section {
 
-    grid-area: experience;
+        grid-area: experience;
 
-    background-color: var(--white-background); /* Lighter green for the section background */
+        display: flex;
 
-    padding: 20px; /* Internal padding for the section */
+        flex-direction: column;
 
-    border-radius: var(--border-radius-medium); /* Rounded corners */
+        gap: 20px;
 
-    box-shadow: var(--box-shadow-light); /* Subtle shadow */
+        padding: 20px;
 
-    display: flex; /* Use flexbox for layout */
+        width: 100%;
 
-    flex-direction: column; /* Stack items vertically */
+        box-sizing: border-box;
 
-    gap: 24px; /* Add vertical spacing between child elements */
-
-    box-sizing: border-box; /* Includes padding in the total dimensions */
+    }
 
  
 
-}
+    .experience-section h2 {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        vertical-align: middle;
+
+       
+
+    }
 
  
 
-.experience-section h2 {
+    .job {
 
-    font-size: 1.5em;
+        background-color: var(--green-light);
 
-    font-weight: 600;
+        border-radius: var(--border-radius-medium);
 
-    color: var(--text-color-primary);
+        box-shadow: var(--box-shadow-light);
 
-    margin-bottom: 16px;
+        padding: 15px;
 
-    text-align: left;
+        position: relative;
 
-}
+        display: flex;
 
- 
+        flex-direction: row;
 
-/* Individual Job Card */
+        gap: 20px;
 
-.job {
+        align-items: flex-start;
 
-    background-color: var( --green-light); /* Changed background to white for better contrast within the light green section */
+        box-sizing: border-box;
 
-    border-radius: var(--border-radius-medium); /* Rounded corners for job cards */
+        width: 100%;    
 
-    box-shadow: var(--box-shadow-light); /* Subtle shadow for job cards */
+        max-width: 100%; 
 
-    padding: 16px; /* Internal padding for job cards */
-
-    position: relative; /* For positioning any inner elements */
+    }
 
  
 
-}
+    .job.first-job {
+
+        background-color: var(--green-primary);
+
+        color: var(--white-background);
+
+        border-left: 4px solid var(--green-primary);
+
+        padding: 30px 24px;
+
+    }
 
  
 
-/* Specifically highlight the first job using a class */
+    .job.first-job .job-details h3,
 
-.job.first-job {
+    .job.first-job .company-date,
 
-    background-color: var(--green-primary); /* Dark green background for the first job */
+    .job.first-job .job-description li {
 
-    color: var(--white-background); /* Ensure text is readable */
+        color: var(--white-background);
 
-    border-left: 5px solid var(--green-primary); /* Optional: add a left border in green */
-
-    padding: 16px;
-
-}
+    }
 
  
-
-/* Ensure white text for the first job's content */
-
-.job.first-job .job-details h3,
-
-.job.first-job .company-date,
-
-.job.first-job .job-description li {
-
-    color: var(--white-background);
-
-
-}
-
- 
-
-.job-details {
-
-    display: flex;
-
-    flex-direction: column; /* Stack items vertically */
-
-    align-items: flex-start; /* Align items to the left */
-
-    margin-bottom: 8px;
-
-    font-size: 19.36px;
-
-}
-
- 
-
-/* Position the Most Recent badge */
-
-.most-recent-badge {
-
-    background-color: var(--burnt-orange);
-
-    color: var(--white-background);
-
-    padding: 4px 8px;
-
-    border-radius: var(--border-radius-small);
-
-    position: absolute;
-
-    top: 10px;
-
-    right: 10px; /* Place the badge on the top-right corner */
-
-    font-family: Poppins;
-
-    font-weight: 500;
-
-    font-size: 14.52px;
-
-    line-height: 155%;
-
-    letter-spacing: 0%;
-
-    text-align: center;
-
-    vertical-align: middle;
-
-   text-transform: capitalize;
-
- 
-
-}
-
- 
-
-.job-details h3 {
 
   
 
-    font-weight: bold;
+    .job .most-recent-badge {
 
-    color: var(--text-color-primary);
+        background-color: var(--burnt-orange);
 
-    margin-bottom: 2px;
+        color: var(--white-background);
 
-    text-align: left;
+        padding: 3px 6px;
 
-    font-family: Poppins;
+        border-radius: var(--border-radius-small);
 
-    font-weight: 500;
+        position: absolute;
 
-    font-size: 24.2px;
+        top: 8px;
 
-    line-height: 150%;
+        right: 8px;
 
-letter-spacing: 0%;
+        font-family: Poppins;
 
-vertical-align: middle;
+        font-weight: 500;
 
- 
+        font-size: 14.52px;
 
-}
+        line-height: 155%;
 
- 
+        letter-spacing: 0%;
 
-.company-date {
+        text-align: center;
 
-    font-size: 12px;
+        vertical-align: middle;
 
-    color: var(--text-color-secondary);
+        text-transform: capitalize;
 
-    text-align: left; /* Ensure alignment to the left */
+        z-index: 1;
 
-    font-family: Poppins;
-
-    font-weight: 500;
-
-    font-size: 19.36px;
-
-    line-height: 150%;
-
-    letter-spacing: 0%;
-
-}
+    }
 
  
 
-.job-description {
+    .job-details {
 
-    padding-left: 16px;
+        display: flex;
 
-    margin-bottom: 0;
+        flex-direction: column;
 
-    font-family: Poppins;
+        flex-shrink: 0;
 
-font-weight: 500;
+        max-width: 100%;
 
-font-size: 24.2px;
+        box-sizing: border-box;
 
-line-height: 150%;
-
-letter-spacing: 0%;
-
-text-align: left;
-
-vertical-align: middle;
+    }
 
  
 
-}
+    .job-details h3 {
+
+        font-size: 1.1em;
+
+        font-weight: 700;
+
+        color: var(--text-color-primary);
+
+        margin-bottom: 8px;
+
+    }
 
  
 
-.job-description li {
+    .company-date {
 
-    font-size: 12px;
+        font-size: 0.9em;
 
-    color: var(--text-color-secondary);
+        color: var(--text-color-secondary);
 
-    line-height: 1.4;
+        text-align: left;
 
-    margin-bottom: 4px;
+        margin-bottom: 0;
 
-    text-align: left;
-
-    font-family: Poppins;
-
-font-weight: 400;
-
-font-size: 19.36px;
-
-line-height: 150%;
-
-letter-spacing: 0%;
-
-vertical-align: middle;
-
-}
-
-.contact-section {
-
-    grid-area: contact; /* Ensure it matches the grid-template-areas */
-
-    background-color: var(--burnt-orange); /* Background color */
-
-    color: var(--white-background); /* Text color */
-
-    padding: 20px; /* Add padding */
-
-    border-radius: var(--border-radius-medium); /* Rounded corners */
-
-    box-shadow: var(--box-shadow-light); /* Add a subtle shadow */
-
-    text-align: center; /* Center text inside the section */
-
-}
+    }
 
  
 
-/* Contact Section Heading */
+    .job.first-job .company-date {
 
-.contact-section h2 {
+        color: var(--white-background);
 
-    font-size: 1.5em;
-
-    font-weight: 600;
-
-    margin-bottom: 16px;
-
-    color: var(--white-background); /* White text for contrast */
-
-}
+    }
 
  
 
-/* Contact Section Content */
+    .job-description {
 
-.contact-section p {
+        padding-left: 20px;
 
-    margin-bottom: 12px;
+        margin-bottom: 0;
 
-    font-family: Poppins;
+        margin-top: 0;
 
-    font-weight: 500;
+        flex-grow: 1;
 
-    font-size: 19.36px;
+        min-width: 0;
 
-    line-height: 150%;
+        box-sizing: border-box;
 
-    letter-spacing: 0%;
+        flex-basis: 0;
 
-    vertical-align: middle;
+        word-break: break-word;
 
-    color: var(--white-background); /* Ensure text is visible */
+        overflow-wrap: break-word;
 
-}
+    }
+
+ 
+
+    .job-description li {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 19.36px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+        word-break: break-word;
+
+        color: var(--text-color-secondary);
+
+        margin-bottom: 8px;
+
+    }
 
  
 
-.contact-section a {
+    .job.first-job .job-description li {
 
-    color: var(--white-background);
+        color: var(--white-background);
 
-    text-decoration: underline;
-
-    font-weight: bold;
-
-}
-
-/* Footer Section */
-.footer-section {
-    background-color: var(--green-primary);
-    color: var(--white-background);
-    padding: 20px;
-    text-align: center;
-    border-radius: var(--border-radius-medium);
-    box-shadow: var(--box-shadow-light);
-    font-family: Poppins, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.footer-section a {
-    color: var(--white-background);
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.footer-section a:hover {
-    color: var(--burnt-orange);
-}
+    }
 
  
+
+    /* Contact Section */
+
+    .contact-section {
+
+        grid-area: contact;
+
+        background-color: var(--burnt-orange);
+
+        color: var(--white-background);
+
+        padding: 20px;
+
+        border-radius: var(--border-radius-medium);
+
+        box-shadow: var(--box-shadow-light);
+
+        text-align: center;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+    }
+
+ 
+
+    .contact-section p {
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        vertical-align: middle;
+
+ 
+
+    }
+
+ 
+
+    @media (min-width: 768px) {
+
+        .desktop-only {
+
+          display: block;
+
+        }
+
+      }
+
+ 
+
+      .contact-section {
+
+        background-color: var(--burnt-orange);
+
+        color: #DDDDDD;
+
+        padding: 20px 20px 24px;
+
+        border-radius: var(--border-radius-medium);
+
+        box-shadow: var(--box-shadow-light);
+
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+
+        min-height: 180px;
+
+      }
+
+     
+
+      .contact-note {
+
+        margin: 0;
+
+        font-family: Poppins;
+
+        font-weight: 500;
+
+        font-size: 33.88px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        width: 100%;
+
+      }
+
+     
+
+      .contact-details {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        gap: 10px;
+
+        width: 100%;
+
+        padding: 0 10px;
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        color: #DDDDDD;
+
+      }
+
+     
+
+      .contact-details a {
+
+        font-family: Poppins;
+
+        font-weight: 400;
+
+        font-size: 24.2px;
+
+        line-height: 150%;
+
+        letter-spacing: 0%;
+
+        color: #DDDDDD;
+
+        text-decoration: none;
+
+      }
+
+     
+
+      .contact-details a:hover {
+
+        text-decoration: underline;
+
+      }
+
+     
+
+      .separator {
+
+        color: #DDDDDD;
+
+      }
+
+     
+
+    /* Image dimension resets that were inside the original desktop query */
+
+    .html5-img,
+
+    .css-img,
+
+    .javascript-img,
+
+    .tailwind-img,
+
+    .figma-img,
+
+    .microsoft-img,
+
+    .google-img,
+
+    .git-img,
+
+    .github-img,
+
+    .visualstudio-img {
+
+        width: 41.1px;
+
+        height: 41.1px;
+
+        object-fit: contain;
+
+        background: transparent;
+
+        position: static;
+
+        top: auto;
+
+        left: auto;
+
+    }
+
+}
+
  
